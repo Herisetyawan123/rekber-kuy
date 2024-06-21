@@ -30,7 +30,9 @@
 
 	<!-- Title
 	============================================= -->
-	<title>LeadMark</title>
+	<title>R-ekber</title>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 

@@ -12,9 +12,7 @@
 
 								<div class="hb-content">
 									<a class="logo logo-header" href="#">
-										<img src="{{asset('images/files/logo-header.png')}}" data-logo-alt="images/files/logo-header-alt.png" alt="">
-										<h3><span class="colored">LeadMark</span></h3>
-										<span>HTML Template</span>
+										<img src="{{asset('assets/images/logo/logo.png')}}" data-logo-alt="{{asset('assets/images/logo/logo.png')}}" alt="Logo Negoin">
 									</a><!-- .logo end -->
 									<div class="hb-meta">
 									</div><!-- .hb-meta end -->

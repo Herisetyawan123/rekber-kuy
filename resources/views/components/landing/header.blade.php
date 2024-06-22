@@ -12,7 +12,7 @@
 
 								<div class="hb-content">
 									<a class="logo logo-header" href="#">
-										<img src="{{asset('images/files/rekber.png')}}" data-logo-alt="images/files/logo-header-alt.png" alt="">
+										<img src="{{asset('images/files/logo-header.png')}}" data-logo-alt="images/files/logo-header-alt.png" alt="">
 										<h3><span class="colored">LeadMark</span></h3>
 										<span>HTML Template</span>
 									</a><!-- .logo end -->

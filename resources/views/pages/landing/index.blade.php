@@ -129,9 +129,9 @@
                             <div class="col-md-12 ">
 
                                 <p class="font-size-14px text-center">
-                                    Kepuasan bukan hanya untuk pembeli tetapi juga untuk penjual
+                                    ----- Kepuasan bukan hanya untuk pembeli tetapi juga untuk penjual -----
                                 </p>
-                                <div class="slider-clients">
+                                {{-- <div class="slider-clients">
                                     <ul class="owl-carousel">
                                         <li>
                                             <div class="slide">
@@ -164,7 +164,7 @@
                                             </div><!-- .slide end -->
                                         </li>
                                     </ul>
-                                </div><!-- .slider-clients end -->
+                                </div><!-- .slider-clients end --> --}}
 
                             </div><!-- .col-md-12 end -->
 

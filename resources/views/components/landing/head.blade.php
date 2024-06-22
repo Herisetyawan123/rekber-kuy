@@ -23,14 +23,16 @@
 
 	<!-- Favicon
 	============================================= -->
-	<link rel="shortcut icon" href="{{asset('images/general-elements/favicon/favicon.png')}}">
-	<link rel="apple-touch-icon" href="{{asset('images/general-elements/favicon/apple-touch-icon.png')}}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{{asset('images/general-elements/favicon/apple-touch-icon-72x72.png')}}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{{asset('images/general-elements/favicon/apple-touch-icon-114x114.png')}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/images/icon/apple-touch-icon.png')}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/images/icon/favicon-32x32.png')}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/icon/favicon-16x16.png')}}">
+	<link rel="icon" type="image/png" sizes="192x192" href="{{asset('assets/images/icon/android-chrome-192x192.png')}}">
+	<link rel="icon" type="image/png" sizes="512x512" href="{{asset('assets/images/icon/android-chrome-512x512.png')}}">
+	<link rel="manifest" href="{{asset('assets/images/icon/site.webmanifest')}}">
 
 	<!-- Title
 	============================================= -->
-	<title>R-ekber</title>
+	<title>Nego.in</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

@@ -24,25 +24,35 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <style>
-            @keyframes bg-slide {
-            0% {
-                background-image: url('/assets/images/bg/bg1.jpg');
+        @keyframes bg-slide {
+                0%, 24% {
+                    background-image: url('/assets/images/bg/bg1.jpg');
+                    opacity: 1;
+                }
+                24%, 44% {
+                    background-image: url('/assets/images/bg/bg2.jpg');
+                    opacity: 1;
+                }
+                44%, 68% {   
+                    background-image: url('/assets/images/bg/bg3.jpg');
+                    opacity: 1;
+                }
+                68%, 92% {
+                    background-image: url('/assets/images/bg/bg4.jpg');
+                    opacity: 1;
+                }
+                92%, 100% {
+                    background-image: url('/assets/images/bg/bg1.jpg');
+                    opacity: 1;
+                }
             }
-            33% {
-                background-image: url('/assets/images/bg/bg2.jpg');
-            }
-            66% {   
-                background-image: url('/assets/images/bg/bg3.jpg');
-            }
-            100% {
-                background-image: url('/assets/images/bg/bg4.jpg');
-            }
-        }
 
         .auth-bg {
-            animation: bg-slide 15s infinite;
+            animation: bg-slide 20s infinite;
             background-size: cover;
             background-position: center;
+            position: relative;
+            z-index: 0;
         }
 
         .bg-overlay {
@@ -52,11 +62,12 @@
             width: 100%;
             height: 100%;
             background-color: rgba(28, 34, 145, 0.65) !important;
+            z-index: 1;
         }
 
         .container {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         </style>
         

@@ -16,7 +16,7 @@
                         <div class="alert alert-danger alert-border-left alert-dismissible fade show" role="alert"
                             style="display: flex;align-items: center;">
                             <i class="mdi mdi-block-helper align-middle"></i>
-                            <ul style="margin: 0px !important; display: inline-block;">
+                            <ul style="margin: 0px !important; display: inline-block; list-style: none;">
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach

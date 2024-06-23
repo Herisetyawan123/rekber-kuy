@@ -5,22 +5,21 @@
                     <div class="navbar-brand-box">
                         <a href="index.html" class="logo logo-dark">
                             <span class="logo-sm">
-                                <img src="{{asset('assets/images/logo/logo-dark.png')}}" alt="" height="24">
+                                <img src="{{ asset('assets/images/logo/logo-dark.png') }}" alt="" height="24">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{asset('assets/images/logo/logo-dark.png')}}" alt="" height="24"> <span
-                                    {{-- class="logo-txt">Minia</span> --}}
-                            </span>
+                                <img src="{{ asset('assets/images/logo/logo-dark.png') }}" alt=""
+                                    height="24"> <span {{-- class="logo-txt">Minia</span> --}} </span>
                         </a>
 
                         <a href="index.html" class="logo logo-light">
                             <span class="logo-sm">
-                                <img src="{{asset('assets/images/logo/logo-light.png')}}" alt="" height="24">
+                                <img src="{{ asset('assets/images/logo/logo-light.png') }}" alt=""
+                                    height="24">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{asset('assets/images/logo/logo-light.png')}}" alt="" height="24"> <span
-                                    {{-- class="logo-txt">Minia</span> --}}
-                            </span>
+                                <img src="{{ asset('assets/images/logo/logo-light.png') }}" alt=""
+                                    height="24"> <span {{-- class="logo-txt">Minia</span> --}} </span>
                         </a>
                     </div>
 
@@ -72,8 +71,8 @@
                     </div>
 
                     <div class="dropdown d-none d-lg-inline-block ms-1">
-                        <button type="button" class="btn header-item" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <i data-feather="grid" class="icon-lg"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
@@ -216,7 +215,7 @@
                             </div>
                         </div>
                     </div>
-{{-- 
+                    {{-- 
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item right-bar-toggle me-2">
                             <i data-feather="settings" class="icon-lg"></i>
@@ -236,11 +235,15 @@
                             <!-- item-->
                             <a class="dropdown-item" href="apps-contacts-profile.html"><i
                                     class="mdi mdi mdi-face-man font-size-16 align-middle me-1"></i> Profile</a>
-                            {{-- <a class="dropdown-item" href="auth-lock-screen.html"><i
-                                    class="mdi mdi-lock font-size-16 align-middle me-1"></i> Lock screen</a> --}}
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="auth-logout.html"><i
-                                    class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                            <form action="{{ route('logout') }}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button class="dropdown-item">
+                                    <i class="mdi mdi-logout font-size-16 align-middle me-1"></i>
+                                    Logout
+                                </button>
+                            </form>
                         </div>
                     </div>
 

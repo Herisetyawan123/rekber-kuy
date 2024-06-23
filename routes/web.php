@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 // register
-Route::get('/register', function () {
-    return view('pages.auth.register');
-})->name('register');
+Route::controller(RegisteredUserController::class)->group(function(){
+    Route::get('/register', 'create')->name('register');
+    Route::post('/register', 'store')->name('register');
+});
 
 // auth login
 Route::controller(AuthenticatedSessionController::class)->group(function(){

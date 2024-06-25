@@ -32,7 +32,7 @@
                                 <div class="description">
                                     Providing a transaction platform between sellers and buyers that is easier and more effective while protecting your important identity
                                 </div>
-                                <a class="btn popup-btn x-large colorful hover-colorful-darken mt-40" href="#header">> Get Started</a>
+                                <a class="btn x-large colorful hover-colorful-darken mt-40" href="{{ route('home') }}">> Get Started</a>
                             </div><!-- .banner-center-box end -->
                         </div><!-- .col-md-6 end -->
                     </div><!-- .row end -->

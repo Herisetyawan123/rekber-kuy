@@ -22,7 +22,7 @@
 
                                     <a href="{{ route('room.penjual') }}" class="dropdown-item" data-key="t-forms">Chat</a>
 
-                                    <a href="{{ route('invoice.penjual') }}" class="dropdown-item"
+                                    <a href="{{ route('transaksi.penjual') }}" class="dropdown-item"
                                     data-key="t-tables">Transaksi List</a>
                                 </div>
                             </li>
@@ -38,20 +38,15 @@
 
                                     <a href="{{ route('room.pembeli') }}" class="dropdown-item" data-key="t-authentication">Chat</a>
 
-                                    <a href="{{ route('invoice.pembeli') }}" class="dropdown-item"
+                                    <a href="{{ route('transaksi.pembeli') }}" class="dropdown-item"
                                     data-key="t-utility">Transaksi List</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
+                                <a class="nav-link dropdown-toggle arrow-none" href="{{ route('invoice') }}" id="topnav-dashboard"
                                     role="button">
-                                    <i data-feather="briefcase"></i><span data-key="t-popo">Transaksi</span>
-                                    <div class="arrow-down"></div>
+                                    <i data-feather="book"></i><span data-key="t-invoice">Invoice</span>
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="topnav-pages">
-
-                                    <a href="#" class="dropdown-item" data-key="tss">Invoice</a>
-                                </div>
                             </li>
 
                         </ul>

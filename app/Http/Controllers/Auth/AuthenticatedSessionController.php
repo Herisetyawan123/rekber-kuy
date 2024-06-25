@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
     {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required',
+            'password' => 'required|min:6',
         ]);
 
         $credentials = $request->only('email', 'password');
@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Email belum terdaftar',
+            'email' => 'Email dan Password tidak cocok',
         ]);
     }
 

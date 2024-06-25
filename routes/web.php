@@ -22,8 +22,8 @@ Route::middleware('auth')->group(function(){
         return view('pages.dashboard.index');
     })->name('home');
     
-    Route::get('/chat', function () {
-        return view('pages.chat.index');
+    Route::get('/room/{code}', function () {
+        return view('pages.chat.detail');
     })->name('chat');
     
     Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
@@ -45,6 +45,11 @@ Route::get('/invoice', function () {
 })->name('invoice');
 
 // invoice details
-Route::get('/invoice/details', function () {
-    return view('pages.invoice.details');
+Route::get('/invoice/detail', function () {
+    return view('pages.invoice.detail');
 })->name('invoiceDetails');
+
+// index chat
+Route::get('/room', function () {
+    return view('pages.chat.index');
+})->name('room');

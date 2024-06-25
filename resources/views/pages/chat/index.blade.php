@@ -74,7 +74,7 @@
                     </div>
                     
                     <div class="mx-auto mb-4">
-                        <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
                     </div>
                     <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
@@ -106,17 +106,16 @@
                     </div>
                     
                     <div class="mx-auto mb-4">
-                        <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
                     </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">James Nix</a></h5>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
                     
                 </div>
 
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
-
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
 
                 </div>
             </div>
@@ -139,120 +138,16 @@
                     </div>
                     
                     <div class="mx-auto mb-4">
-                        <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
                     </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Darlene Smith</a></h5>
-                    <p class="text-muted mb-2">UI/UX Designer</p>
-                    
-                </div>
-
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
-
-                </div>
-            </div>
-            <!-- end card -->
-        </div>
-        <!-- end col -->
-        <div class="col-xl-3 col-sm-6">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="dropdown text-end">
-                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                          <i class="bx bx-dots-horizontal-rounded"></i>
-                        </a>
-                      
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#">Edit</a>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Remove</a>
-                        </div>
-                    </div>
-                    
-                    <div class="avatar-xl mx-auto mb-4">
-                        <div class="avatar-title bg-light-subtle text-light display-4 m-0 rounded-circle">
-                            <i class="bx bxs-user-circle"></i>
-                        </div>
-                    </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">William Swift</a></h5>
-                    <p class="text-muted mb-2">Backend Developer</p>
-                    
-                </div>
-
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
-
-
-                </div>
-            </div>
-            <!-- end card -->
-        </div>
-        <!-- end col -->
-
-        <div class="col-xl-3 col-sm-6">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="dropdown text-end">
-                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                          <i class="bx bx-dots-horizontal-rounded"></i>
-                        </a>
-                      
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#">Edit</a>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Remove</a>
-                        </div>
-                    </div>
-                    
-                    <div class="avatar-xl mx-auto mb-4">
-                        <div class="avatar-title bg-light-subtle text-light display-4 m-0 rounded-circle">
-                            <i class="bx bxs-user-circle"></i>
-                        </div>
-                    </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Kevin West</a></h5>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
                     
                 </div>
 
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
-
-
-                </div>
-            </div>
-            <!-- end card -->
-        </div>
-        <!-- end col -->
-        <div class="col-xl-3 col-sm-6">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="dropdown text-end">
-                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                          <i class="bx bx-dots-horizontal-rounded"></i>
-                        </a>
-                      
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#">Edit</a>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Remove</a>
-                        </div>
-                    </div>
-                    
-                    <div class="mx-auto mb-4">
-                        <img src="assets/images/users/avatar-6.jpg" alt="" class="avatar-xl rounded-circle img-thumbnail">
-                    </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Tommy Hayes</a></h5>
-                    <p class="text-muted mb-2">Backend Developer</p>
-                    
-                </div>
-
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
-
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
 
                 </div>
             </div>
@@ -275,49 +170,144 @@
                     </div>
                     
                     <div class="mx-auto mb-4">
-                        <img src="assets/images/users/avatar-8.jpg" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
                     </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Diana Owens</a></h5>
-                    <p class="text-muted mb-2">UI/UX Designer</p>
-                    
-                </div>
-
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
-
-                </div>
-            </div>
-            <!-- end card -->
-        </div>
-        <!-- end col -->
-        <div class="col-xl-3 col-sm-6">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="dropdown text-end">
-                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                          <i class="bx bx-dots-horizontal-rounded"></i>
-                        </a>
-                      
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#">Edit</a>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Remove</a>
-                        </div>
-                    </div>
-                    
-                    <div class="mx-auto mb-4">
-                        <img src="assets/images/users/avatar-9.jpg" alt="" class="avatar-xl rounded-circle img-thumbnail">
-                    </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Paul Sanchez</a></h5>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
                     
                 </div>
 
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
-                                        <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
 
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+        <div class="col-xl-3 col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="dropdown text-end">
+                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                          <i class="bx bx-dots-horizontal-rounded"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mx-auto mb-4">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                    </div>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
+                    <p class="text-muted mb-2">Full Stack Developer</p>
+                    
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+        <div class="col-xl-3 col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="dropdown text-end">
+                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                          <i class="bx bx-dots-horizontal-rounded"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mx-auto mb-4">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                    </div>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
+                    <p class="text-muted mb-2">Full Stack Developer</p>
+                    
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+        <div class="col-xl-3 col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="dropdown text-end">
+                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                          <i class="bx bx-dots-horizontal-rounded"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mx-auto mb-4">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                    </div>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
+                    <p class="text-muted mb-2">Full Stack Developer</p>
+                    
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+        <div class="col-xl-3 col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="dropdown text-end">
+                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                          <i class="bx bx-dots-horizontal-rounded"></i>
+                        </a>
+                      
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Remove</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mx-auto mb-4">
+                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
+                    </div>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
+                    <p class="text-muted mb-2">Full Stack Developer</p>
+                    
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</button>
+                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
 
                 </div>
             </div>

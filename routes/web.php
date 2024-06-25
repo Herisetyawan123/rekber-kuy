@@ -22,11 +22,46 @@ Route::middleware('auth')->group(function(){
         return view('pages.dashboard.index');
     })->name('home');
     
+
+    Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+
+    // profile
+    Route::get('/profile', function () {
+        return view('pages.profile.index');
+    })->name('profile');
+
+    // invoice
+    Route::get('/invoice/penjual', function () {
+        return view('pages.invoice.index');
+    })->name('invoice.penjual');
+    Route::get('/invoice/pembeli', function () {
+        return view('pages.invoice.index');
+    })->name('invoice.pembeli');
+
+    // invoice details
+    Route::get('/invoice/penjual/detail', function () {
+        return view('pages.invoice.detail');
+    })->name('invoice.detail.penjual');
+    Route::get('/invoice/pembeli/detail', function () {
+        return view('pages.invoice.detail');
+    })->name('invoice.detail.pembeli');
+
+    // index chat
+    Route::get('/room/penjual', function () {
+        return view('pages.chat.index');
+    })->name('room.penjual');
+    Route::get('/room/pembeli', function () {
+        return view('pages.chat.index');
+    })->name('room.pembeli');
+
+
     Route::get('/room/{code}', function () {
         return view('pages.chat.detail');
     })->name('chat');
     
-    Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+
+
+
 });
 
 // landing
@@ -34,22 +69,3 @@ Route::get('/', function () {
     return view('pages.landing.index');
 });
 
-// profile
-Route::get('/profile', function () {
-    return view('pages.profile.index');
-})->name('profile');
-
-// invoice
-Route::get('/invoice', function () {
-    return view('pages.invoice.index');
-})->name('invoice');
-
-// invoice details
-Route::get('/invoice/detail', function () {
-    return view('pages.invoice.detail');
-})->name('invoiceDetails');
-
-// index chat
-Route::get('/room', function () {
-    return view('pages.chat.index');
-})->name('room');

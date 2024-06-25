@@ -13,7 +13,8 @@
                                     <script>
                                         document.write(new Date().getFullYear())
                                     </script> <span class="colored">Negoin</span> . Crafted with <i class="mdi mdi-heart text-primary"></i> by
-                                    . <a href="https://buildandservice.tech/" target="blank"><span class="colored">Build and Service</span></a>.</div>
+                                    . <a href="https://buildandservice.tech/" target="blank"><span class="colored">Build and Service</span></a>.
+                                </div>
                                 <ul class="social-icons animated x4 grey hover-colorful icon-only">
                                     <li><a class="si-facebook" href="#"><i class="fa fa-facebook"></i><i class="fa fa-facebook"></i></a></li>
                                     <li><a class="si-twitter" href="#"><i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a></li>

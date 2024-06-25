@@ -37,27 +37,30 @@
                                 <div class="flex-grow-1">
                                     <label class="form-label">Password</label>
                                 </div>
-                                <div class="flex-shrink-0">
-                                    <div class="">
-                                        <a href="auth-recoverpw.html" class="text-muted">Forgot password?</a>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="input-group auth-pass-inputgroup">
                                 <input type="password" name="password" class="form-control" placeholder="Enter password"
-                                    aria-label="Password" aria-describedby="password-addon">
-                                <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i
-                                        class="mdi mdi-eye-outline"></i></button>
+                                    aria-label="Password" aria-describedby="password-addon" id="password-input">
+                                <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon">
+                                    <i class="mdi mdi-eye-outline" id="password-icon"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="row mb-4">
                             <div class="col">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="remember-check">
-                                    <label class="form-check-label" for="remember-check">
-                                        Remember me
-                                    </label>
+                                <div class="d-flex align-items-start">
+                                    <div class="flex-grow-1">
+                                        <input class="form-check-input" type="checkbox" id="remember-check">
+                                        <label class="form-check-label" for="remember-check">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <div class="">
+                                            <a href="auth-recoverpw.html" class="text-primary">Forgot password?</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -76,11 +79,28 @@
                     <p class="mb-0">©
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> Negoin . Crafted with <i class="mdi mdi-heart text-primary"></i> by
-                        Build and Services
+                        </script> Negoin . Crafted with <i class="mdi mdi-heart text-primary"></i> <a href="https://buildandservice.tech/" target="blank"><span class="colored">Build and Service</span></a>.
                     </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('password-addon').addEventListener('click', function () {
+            const passwordInput = document.getElementById('password-input');
+            const passwordIcon = document.getElementById('password-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.classList.remove('mdi-eye-outline');
+                passwordIcon.classList.add('mdi-eye-off-outline');
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.classList.remove('mdi-eye-off-outline');
+                passwordIcon.classList.add('mdi-eye-outline');
+            }
+        });
+    </script>
+    
+    
 </x-auth-layouts>

@@ -20,9 +20,9 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                    <a href="{{ route('room') }}" class="dropdown-item" data-key="t-forms">Chat</a>
+                                    <a href="{{ route('room.penjual') }}" class="dropdown-item" data-key="t-forms">Chat</a>
 
-                                    <a href="{{ route('invoice') }}" class="dropdown-item"
+                                    <a href="{{ route('invoice.penjual') }}" class="dropdown-item"
                                     data-key="t-tables">Transaksi List</a>
                                 </div>
                             </li>
@@ -36,9 +36,9 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                    <a href="{{ route('room') }}" class="dropdown-item" data-key="t-authentication">Chat</a>
+                                    <a href="{{ route('room.pembeli') }}" class="dropdown-item" data-key="t-authentication">Chat</a>
 
-                                    <a href="{{ route('invoice') }}" class="dropdown-item"
+                                    <a href="{{ route('invoice.pembeli') }}" class="dropdown-item"
                                     data-key="t-utility">Transaksi List</a>
                                 </div>
                             </li>
@@ -50,7 +50,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                    <a href="{{ route('invoice') }}" class="dropdown-item" data-key="tss">Invoice</a>
+                                    <a href="#" class="dropdown-item" data-key="tss">Invoice</a>
                                 </div>
                             </li>
 

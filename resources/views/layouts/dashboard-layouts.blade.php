@@ -29,11 +29,12 @@
                     <div class="col-sm-6">
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> © Minia.
+                        </script> <span class="colored" style="color: blue">Negoin</span> . 
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">
-                            Design & Develop by <a href="#!" class="text-decoration-underline">Themesbrand</a>
+                            Crafted with <i class="mdi mdi-heart text-primary"></i> by
+                            . <a href="https://buildandservice.tech/" target="blank"><span class="colored">Build and Service</span></a>.
                         </div>
                     </div>
                 </div>

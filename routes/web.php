@@ -30,21 +30,21 @@ Route::middleware('auth')->group(function(){
         return view('pages.profile.index');
     })->name('profile');
 
-    // invoice
-    Route::get('/invoice/penjual', function () {
-        return view('pages.invoice.index');
-    })->name('invoice.penjual');
-    Route::get('/invoice/pembeli', function () {
-        return view('pages.invoice.index');
-    })->name('invoice.pembeli');
+    // history transaksi
+    Route::get('/transaksi/penjual', function () {
+        return view('pages.transaksi.index');
+    })->name('transaksi.penjual');
+    Route::get('/transaksi/pembeli', function () {
+        return view('pages.transaksi.index');
+    })->name('transaksi.pembeli');
 
-    // invoice details
-    Route::get('/invoice/penjual/detail', function () {
-        return view('pages.invoice.detail');
-    })->name('invoice.detail.penjual');
-    Route::get('/invoice/pembeli/detail', function () {
-        return view('pages.invoice.detail');
-    })->name('invoice.detail.pembeli');
+    // history transaksi details
+    Route::get('/transaksi/penjual/detail', function () {
+        return view('pages.transaksi.detail');
+    })->name('transaksi.detail.penjual');
+    Route::get('/transaksi/pembeli/detail', function () {
+        return view('pages.transaksi.detail');
+    })->name('transaksi.detail.pembeli');
 
     // index chat
     Route::get('/room/penjual', function () {
@@ -54,10 +54,15 @@ Route::middleware('auth')->group(function(){
         return view('pages.chat.index');
     })->name('room.pembeli');
 
-
     Route::get('/room/{code}', function () {
         return view('pages.chat.detail');
     })->name('chat');
+
+
+    // invoice
+    Route::get('/invoice', function () {
+        return view('pages.invoice.index');
+    })->name('invoice');
     
 
 

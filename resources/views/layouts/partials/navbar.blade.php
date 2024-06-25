@@ -29,9 +29,9 @@
                                             <div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="topnav-invoice">
-                                            <a href="apps-invoices-list.html" class="dropdown-item"
+                                            <a href="{{ route('invoice') }}" class="dropdown-item"
                                                 data-key="t-invoice-list">Invoice List</a>
-                                            <a href="apps-invoices-detail.html" class="dropdown-item"
+                                            <a href="{{ route('invoiceDetails') }}" class="dropdown-item"
                                                 data-key="t-invoice-detail">Invoice Detail</a>
                                         </div>
                                     </div>

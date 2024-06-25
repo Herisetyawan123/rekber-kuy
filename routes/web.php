@@ -38,3 +38,13 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('pages.profile.index');
 })->name('profile');
+
+// invoice
+Route::get('/invoice', function () {
+    return view('pages.invoice.index');
+})->name('invoice');
+
+// invoice details
+Route::get('/invoice/details', function () {
+    return view('pages.invoice.details');
+})->name('invoiceDetails');

@@ -6,10 +6,66 @@
                         <ul class="navbar-nav">
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle arrow-none" href="index.html" id="topnav-dashboard"
+                                <a class="nav-link dropdown-toggle arrow-none" href="{{ route('home') }}" id="topnav-dashboard"
                                     role="button">
                                     <i data-feather="home"></i><span data-key="t-dashboards">Dashboard</span>
                                 </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
+                                    role="button">
+                                    <i data-feather="grid"></i><span data-key="t-apps">Apps</span>
+                                    <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-pages">
+
+                                    <a href="{{ route('chat') }}" class="dropdown-item" data-key="t-chat">Chat</a>
+
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
+                                            id="topnav-invoice" role="button">
+                                            <span data-key="t-invoices">Invoices</span>
+                                            <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-invoice">
+                                            <a href="apps-invoices-list.html" class="dropdown-item"
+                                                data-key="t-invoice-list">Invoice List</a>
+                                            <a href="apps-invoices-detail.html" class="dropdown-item"
+                                                data-key="t-invoice-detail">Invoice Detail</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
+                                            id="topnav-contact" role="button">
+                                            <span data-key="t-contacts">Contacts</span>
+                                            <div class="arrow-down"></div>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-contact">
+                                            <a href="apps-contacts-grid.html" class="dropdown-item"
+                                                data-key="t-user-grid">User Grid</a>
+                                            <a href="apps-contacts-list.html" class="dropdown-item"
+                                                data-key="t-user-list">User List</a>
+                                            <a href="apps-contacts-profile.html" class="dropdown-item"
+                                                data-key="t-profile">Profile</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center"
+                                            href="#" id="topnav-contact" role="button">
+                                            <span data-key="t-contacts" class="">Blog</span>
+                                            <span class="badge bg-danger-subtle text-danger">New</span>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="topnav-contact">
+                                            <a href="apps-blog-grid.html" class="dropdown-item"
+                                                data-key="t-blog-grid">Blog Grid</a>
+                                            <a href="apps-blog-list.html" class="dropdown-item"
+                                                data-key="t-blog-list">Blog List</a>
+                                            <a href="apps-blog-detail.html" class="dropdown-item"
+                                                data-key="t-blog-details">Blog Details</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -98,77 +154,7 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
-                                    role="button">
-                                    <i data-feather="grid"></i><span data-key="t-apps">Apps</span>
-                                    <div class="arrow-down"></div>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="topnav-pages">
-
-                                    <a href="apps-calendar.html" class="dropdown-item"
-                                        data-key="t-calendar">Calendar</a>
-                                    <a href="apps-chat.html" class="dropdown-item" data-key="t-chat">Chat</a>
-
-                                    <div class="dropdown">
-                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                            id="topnav-email" role="button">
-                                            <span data-key="t-email">Email</span>
-                                            <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-email">
-                                            <a href="apps-email-inbox.html" class="dropdown-item"
-                                                data-key="t-inbox">Inbox</a>
-                                            <a href="apps-email-read.html" class="dropdown-item"
-                                                data-key="t-read-email">Read Email</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="dropdown">
-                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                            id="topnav-invoice" role="button">
-                                            <span data-key="t-invoices">Invoices</span>
-                                            <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-invoice">
-                                            <a href="apps-invoices-list.html" class="dropdown-item"
-                                                data-key="t-invoice-list">Invoice List</a>
-                                            <a href="apps-invoices-detail.html" class="dropdown-item"
-                                                data-key="t-invoice-detail">Invoice Detail</a>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown">
-                                        <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                            id="topnav-contact" role="button">
-                                            <span data-key="t-contacts">Contacts</span>
-                                            <div class="arrow-down"></div>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-contact">
-                                            <a href="apps-contacts-grid.html" class="dropdown-item"
-                                                data-key="t-user-grid">User Grid</a>
-                                            <a href="apps-contacts-list.html" class="dropdown-item"
-                                                data-key="t-user-list">User List</a>
-                                            <a href="apps-contacts-profile.html" class="dropdown-item"
-                                                data-key="t-profile">Profile</a>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown">
-                                        <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center"
-                                            href="#" id="topnav-contact" role="button">
-                                            <span data-key="t-contacts" class="">Blog</span>
-                                            <span class="badge bg-danger-subtle text-danger">New</span>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="topnav-contact">
-                                            <a href="apps-blog-grid.html" class="dropdown-item"
-                                                data-key="t-blog-grid">Blog Grid</a>
-                                            <a href="apps-blog-list.html" class="dropdown-item"
-                                                data-key="t-blog-list">Blog List</a>
-                                            <a href="apps-blog-detail.html" class="dropdown-item"
-                                                data-key="t-blog-details">Blog Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components"

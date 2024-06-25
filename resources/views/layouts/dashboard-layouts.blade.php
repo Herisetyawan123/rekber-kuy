@@ -29,7 +29,7 @@
                     <div class="col-sm-6">
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> <span class="colored" style="color: blue">Negoin</span> . 
+                        </script> <span class="colored">Negoin</span> . 
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">

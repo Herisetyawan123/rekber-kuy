@@ -63,6 +63,12 @@ Route::middleware('auth')->group(function(){
     Route::get('/invoice', function () {
         return view('pages.invoice.index');
     })->name('invoice');
+
+    // invoice details
+    Route::get('/invoice/detail', function () {
+        return view('pages.invoice.detail');
+    })->name('invoice.detail');
+    
     
 
 

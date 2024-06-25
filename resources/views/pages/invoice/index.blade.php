@@ -71,32 +71,23 @@
                             </thead>
                             <tbody>
 
-                                <tr>
+                                <tr data-url="/invoice/detail/">
                                     <td>
                                         <div class="form-check font-size-16">
                                             <input type="checkbox" class="form-check-input">
                                             <label class="form-check-label"></label>
                                         </div>
                                     </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0215</a> </td>
-                                    <td>
-                                        12 Oct, 2020
-                                    </td>
+                                    <td><a href="javascript:void(0);" class="text-body fw-medium">#MN0215</a></td>
+                                    <td>12 Oct, 2020</td>
                                     <td>Connie Franco</td>
-                                    
-                                    <td>
-                                        $26.30
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
+                                    <td>$26.30</td>
+                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
                                     <td>
                                         <div>
                                             <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
                                         </div>
                                     </td>
-                                    
                                     <td>
                                         <div class="dropdown">
                                             <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -110,26 +101,18 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr data-url="/invoice/detail/">
                                     <td>
                                         <div class="form-check font-size-16">
                                             <input type="checkbox" class="form-check-input">
                                             <label class="form-check-label"></label>
                                         </div>
                                     </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0214</a> </td>
-                                    <td>
-                                        11 Oct, 2020
-                                    </td>
-                                    <td>Paul Reynolds</td>
-                                    
-                                    <td>
-                                        $24.20
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
+                                    <td><a href="javascript:void(0);" class="text-body fw-medium">#MN0215</a></td>
+                                    <td>12 Oct, 2020</td>
+                                    <td>Connie Franco</td>
+                                    <td>$26.30</td>
+                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
                                     <td>
                                         <div>
                                             <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
@@ -148,26 +131,18 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr data-url="/invoice/detail/">
                                     <td>
                                         <div class="form-check font-size-16">
                                             <input type="checkbox" class="form-check-input">
                                             <label class="form-check-label"></label>
                                         </div>
                                     </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0213</a> </td>
-                                    <td>
-                                        10 Oct, 2020
-                                    </td>
-                                    <td>Ronald Patterson</td>
-                                    
-                                    <td>
-                                        $20.20
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-warning font-size-12">Pending</div>
-                                    </td>
+                                    <td><a href="javascript:void(0);" class="text-body fw-medium">#MN0215</a></td>
+                                    <td>12 Oct, 2020</td>
+                                    <td>Connie Franco</td>
+                                    <td>$26.30</td>
+                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
                                     <td>
                                         <div>
                                             <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
@@ -186,330 +161,18 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr data-url="/invoice/detail/">
                                     <td>
                                         <div class="form-check font-size-16">
                                             <input type="checkbox" class="form-check-input">
                                             <label class="form-check-label"></label>
                                         </div>
                                     </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0212</a> </td>
-                                    <td>
-                                        09 Oct, 2020
-                                    </td>
-                                    <td>Adella Perez</td>
-                                    
-                                    <td>
-                                        $16.80
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0211</a> </td>
-                                    <td>
-                                        08 Oct, 2020
-                                    </td>
-                                    <td>Theresa Mayers</td>
-                                    
-                                    <td>
-                                        $22.00
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0210</a> </td>
-                                    <td>
-                                        07 Oct, 2020
-                                    </td>
-                                    <td>Michael Wallace</td>
-                                    
-                                    <td>
-                                        $15.60
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0209</a> </td>
-                                    <td>
-                                        06 Oct, 2020
-                                    </td>
-                                    <td>Oliver Gonzales</td>
-                                    
-                                    <td>
-                                        $26.50
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-warning font-size-12">Pending</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0208</a> </td>
-                                    <td>
-                                        05 Oct, 2020
-                                    </td>
-                                    <td>David Burke</td>
-                                    
-                                    <td>
-                                        $24.20
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0207</a> </td>
-                                    <td>
-                                        04 Oct, 2020
-                                    </td>
-                                    <td>Willie Verner</td>
-                                    
-                                    <td>
-                                        $21.30
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-warning font-size-12">Pending</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-labe10"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0206</a> </td>
-                                    <td>
-                                        03 Oct, 2020
-                                    </td>
-                                    <td>Felix Perry</td>
-                                    
-                                    <td>
-                                        $22.60
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-labe11"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0205</a> </td>
-                                    <td>
-                                        02 Oct, 2020
-                                    </td>
-                                    <td>Virgil Kelley</td>
-                                    
-                                    <td>
-                                        $18.20
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-success font-size-12">Paid</div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bx bx-dots-horizontal-rounded"></i>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                <li><a class="dropdown-item" href="#">Print</a></li>
-                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-check font-size-16">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-labe12"></label>
-                                        </div>
-                                    </td>
-                                    
-                                    <td><a href="javascript: void(0);" class="text-body fw-medium">#MN0204</a> </td>
-                                    <td>
-                                        01 Oct, 2020
-                                    </td>
-                                    <td>Matthew Lawler</td>
-                                    
-                                    <td>
-                                        $15.80
-                                    </td>
-                                    <td>
-                                        <div class="badge badge-soft-warning font-size-12">Pending</div>
-                                    </td>
+                                    <td><a href="javascript:void(0);" class="text-body fw-medium">#MN0215</a></td>
+                                    <td>12 Oct, 2020</td>
+                                    <td>Connie Franco</td>
+                                    <td>$26.30</td>
+                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
                                     <td>
                                         <div>
                                             <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
@@ -540,4 +203,12 @@
         <!-- end col -->
     </div>
     <!-- end row -->
+
+    <script>
+        document.querySelectorAll('tr[data-url]').forEach(row => {
+            row.addEventListener('click', () => {
+                window.location.href = row.getAttribute('data-url');
+            });
+        });
+    </script>
 </x-dashboard-layouts>

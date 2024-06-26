@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('room_id')->constrained('chats')->onDelete('cascade');
-            $table->foreignId('buyer_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('buyer_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->foreignId('seller_id')->constrained('users')->onDelete('cascade');
             $table->decimal('amount', 15, 2);
-            $table->enum('status', ['pending', 'completed', 'cancelled']);
+            $table->enum('status', ['pending', 'completed', 'cancelled'])->default('pending');
             $table->timestamps();
         });
     }

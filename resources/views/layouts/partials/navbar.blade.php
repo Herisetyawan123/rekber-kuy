@@ -13,7 +13,7 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
+                                <a class="nav-link dropdown-toggle arrow-none" href="javascript:void(0);" id="topnav-pages"
                                     role="button">
                                     <i data-feather="arrow-up"></i><span data-key="t-components">Penjual</span>
                                     <div class="arrow-down"></div>
@@ -29,7 +29,7 @@
 
                             
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
+                                <a class="nav-link dropdown-toggle arrow-none" href="javascript:void(0);" id="topnav-pages"
                                     role="button">
                                     <i data-feather="arrow-down"></i><span data-key="t-extra-pages">Pembeli</span>
                                     <div class="arrow-down"></div>

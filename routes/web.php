@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
 // register
@@ -17,7 +18,7 @@ Route::controller(AuthenticatedSessionController::class)->group(function(){
 });
 
 // after dashboard
-Route::middleware('auth')->group(function(){
+Route::middleware(['auth', CheckProfile::class])->group(function(){
     Route::get('/dashboard', function () {
         return view('pages.dashboard.index');
     })->name('home');
@@ -78,5 +79,11 @@ Route::middleware('auth')->group(function(){
 // landing
 Route::get('/', function () {
     return view('pages.landing.index');
-});
+})->name('kontol');
+
+
+// profile cteate
+Route::get('/biodata', function () {
+    return view('pages.profile.create');
+})->name('biodata');
 

@@ -1,6 +1,6 @@
 <x-dashboard-layouts>
-       <!-- start page title -->
-       <div class="row">
+    <!-- start page title -->
+    <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                 <h4 class="mb-sm-0 font-size-18">User Grid</h4>
@@ -29,10 +29,10 @@
                 <div>
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link" href="apps-contacts-list.html" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul"></i></a>
+                            <a class="nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="apps-contacts-grid.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i class="bx bx-grid-alt"></i></a>
+                            <a class="nav-link active" href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i class="bx bx-grid-alt"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +44,7 @@
                     <a class="btn btn-link text-muted py-1 font-size-16 shadow-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bx bx-dots-horizontal-rounded"></i>
                     </a>
-                  
+                
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -63,9 +63,9 @@
                 <div class="card-body">
                     <div class="dropdown text-end">
                         <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                          <i class="bx bx-dots-horizontal-rounded"></i>
+                            <i class="bx bx-dots-horizontal-rounded"></i>
                         </a>
-                      
+                    
                         <div class="dropdown-menu dropdown-menu-end">
                             <a class="dropdown-item" href="#">Edit</a>
                             <a class="dropdown-item" href="#">Action</a>
@@ -78,6 +78,7 @@
                     </div>
                     <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
+                    <span class="badge bg-success">Success</span>
                     
                 </div>
 
@@ -110,6 +111,7 @@
                     </div>
                     <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
+                    <span class="badge bg-warning">Pending</span>
                     
                 </div>
 
@@ -142,6 +144,7 @@
                     </div>
                     <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
                     <p class="text-muted mb-2">Full Stack Developer</p>
+                    <span class="badge bg-danger">Cancel</span>
                     
                 </div>
 

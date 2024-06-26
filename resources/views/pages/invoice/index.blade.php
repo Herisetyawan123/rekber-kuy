@@ -1,5 +1,5 @@
 <x-dashboard-layouts>
-    
+
     <!-- start page title -->
     <div class="row">
         <div class="col-12">
@@ -25,20 +25,24 @@
                     <div class="row">
                         <div class="col-sm">
                             <div class="mb-4">
-                                <button type="button" class="btn btn-light waves-effect waves-light"><i class="bx bx-plus me-1"></i> Add Invoice</button>
+                                <button type="button" class="btn btn-light waves-effect waves-light"><i
+                                        class="bx bx-plus me-1"></i> Add Invoice</button>
                             </div>
                         </div>
                         <div class="col-sm-auto">
                             <div class="d-flex align-items-center gap-1 mb-4">
                                 <div class="input-group datepicker-range">
-                                    <input type="text" class="form-control flatpickr-input" data-input aria-describedby="date1">
-                                    <button class="input-group-text" id="date1" data-toggle><i class="bx bx-calendar-event"></i></button>
+                                    <input type="text" class="form-control flatpickr-input" data-input
+                                        aria-describedby="date1">
+                                    <button class="input-group-text" id="date1" data-toggle><i
+                                            class="bx bx-calendar-event"></i></button>
                                 </div>
                                 <div class="dropdown">
-                                    <a class="btn btn-link text-muted py-1 font-size-16 shadow-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="btn btn-link text-muted py-1 font-size-16 shadow-none dropdown-toggle"
+                                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bx bx-dots-horizontal-rounded"></i>
                                     </a>
-                                  
+
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -51,12 +55,14 @@
                     <!-- end row -->
 
                     <div class="table-responsive">
-                        <table class="table align-middle datatable dt-responsive table-check nowrap" style="border-collapse: collapse; border-spacing: 0 8px; width: 100%;">
+                        <table class="table align-middle datatable dt-responsive table-check nowrap"
+                            style="border-collapse: collapse; border-spacing: 0 8px; width: 100%;">
                             <thead>
                                 <tr class="bg-transparent">
                                     <th style="width: 30px;">
                                         <div class="form-check font-size-16">
-                                            <input type="checkbox" name="check" class="form-check-input" id="checkAll">
+                                            <input type="checkbox" name="check" class="form-check-input"
+                                                id="checkAll">
                                             <label class="form-check-label" for="checkAll"></label>
                                         </div>
                                     </th>
@@ -82,15 +88,21 @@
                                     <td>12 Oct, 2020</td>
                                     <td>Connie Franco</td>
                                     <td>$26.30</td>
-                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
+                                    <td>
+                                        <div class="badge badge-soft-success font-size-12">Paid</div>
+                                    </td>
                                     <td>
                                         <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
+                                            <button type="button"
+                                                class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i
+                                                    class="bx bx-download label-icon"></i> Pdf</button>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button
+                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
@@ -112,15 +124,21 @@
                                     <td>12 Oct, 2020</td>
                                     <td>Connie Franco</td>
                                     <td>$26.30</td>
-                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
+                                    <td>
+                                        <div class="badge badge-soft-success font-size-12">Paid</div>
+                                    </td>
                                     <td>
                                         <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
+                                            <button type="button"
+                                                class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i
+                                                    class="bx bx-download label-icon"></i> Pdf</button>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button
+                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
@@ -142,15 +160,21 @@
                                     <td>12 Oct, 2020</td>
                                     <td>Connie Franco</td>
                                     <td>$26.30</td>
-                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
+                                    <td>
+                                        <div class="badge badge-soft-success font-size-12">Paid</div>
+                                    </td>
                                     <td>
                                         <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
+                                            <button type="button"
+                                                class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i
+                                                    class="bx bx-download label-icon"></i> Pdf</button>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button
+                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
@@ -172,15 +196,21 @@
                                     <td>12 Oct, 2020</td>
                                     <td>Connie Franco</td>
                                     <td>$26.30</td>
-                                    <td><div class="badge badge-soft-success font-size-12">Paid</div></td>
+                                    <td>
+                                        <div class="badge badge-soft-success font-size-12">Paid</div>
+                                    </td>
                                     <td>
                                         <div>
-                                            <button type="button" class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i class="bx bx-download label-icon"></i> Pdf</button>
+                                            <button type="button"
+                                                class="btn btn-soft-light btn-sm w-xs waves-effect btn-label waves-light"><i
+                                                    class="bx bx-download label-icon"></i> Pdf</button>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="dropdown">
-                                            <button class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button
+                                                class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-dots-horizontal-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">

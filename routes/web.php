@@ -21,10 +21,8 @@ Route::controller(AuthenticatedSessionController::class)->group(function(){
 Route::middleware(['auth', CheckProfile::class])->group(function(){
     Route::get('/dashboard', function () {
         return view('pages.dashboard.index');
-    })->name('home');
-    
+    })->name('home');    
 
-    Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
     // profile
     Route::get('/profile', function () {
@@ -70,11 +68,15 @@ Route::middleware(['auth', CheckProfile::class])->group(function(){
         return view('pages.invoice.detail');
     })->name('invoice.detail');
     
+    // profile cteate
+    Route::get('/biodata', function () {
+        return view('pages.profile.create');
+    })->name('biodata');
     
-
-
-
+    
+    
 });
+
 
 // landing
 Route::get('/', function () {
@@ -86,4 +88,9 @@ Route::get('/', function () {
 Route::get('/biodata', function () {
     return view('pages.profile.create');
 })->name('biodata');
+
+Route::post('/profile/create/{id}', [RegisteredUserController::class, 'storeProfile'])->name('profile.create');
+Route::post('/bank/create/{id}', [RegisteredUserController::class, 'storeBank'])->name('bank.create');
+
+Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 

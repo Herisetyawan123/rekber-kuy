@@ -3,7 +3,7 @@
         <div class="w-100">
             <div class="d-flex flex-column h-100">
                 <div class="mb-4 mb-md-5 text-center">
-                    <a href="index.html" class="d-block auth-logo">
+                    <a href="javascript:void(0);" class="d-block auth-logo">
                         <img src="{{ asset('assets/images/logo/logo-dark.png') }}" alt="" height="60">
                     </a>
                 </div>

@@ -64,53 +64,82 @@
                                         <h5>User Details</h5>
                                         <p class="card-title-desc">Fill all information below</p>
                                     </div>
-                                    <form>
+                                    <form id="profileForm">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label for="basicpill-firstname-input" class="form-label">Nama
                                                         Lengkap</label>
-                                                    <input name="name" type="text" class="form-control"
-                                                        id="basicpill-firstname-input"
-                                                        placeholder="Masukkan Nama Lengkap">
+                                                    <input name="name" type="text"
+                                                        class="form-control disabled-input"
+                                                        value="{{ Auth::user()->name }}" id="basicpill-firstname-input"
+                                                        disabled placeholder="Masukkan Nama Lengkap"
+                                                        style="background-color: #e9ecef; cursor: not-allowed;">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
-                                                    <label for="basicpill-lastname-input" class="form-label">Tanggal
+                                                    <label for="example-date-input" class="form-label">Tanggal
                                                         Lahir</label>
-                                                    <input name="date" class="form-control" type="date"
+                                                    <input name="tgl_lahir" class="form-control" type="date"
                                                         value="2019-08-19" id="example-date-input">
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label for="basicpill-phoneno-input"
                                                         class="form-label">Email</label>
                                                     <input name="email" type="text" class="form-control"
-                                                        id="basicpill-phoneno-input" placeholder="Masukkan Email">
+                                                        value="{{ Auth::user()->email }}"
+                                                        style="background-color: #e9ecef; cursor: not-allowed;"
+                                                        id="basicpill-phoneno-input" placeholder="Masukkan Email"
+                                                        disabled>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label for="basicpill-email-input" class="form-label">Gender</label>
-                                                    <select name="gender" class="form-select">
+                                                    <select name="gender" class="form-select"
+                                                        id="basicpill-email-input">
                                                         <option disabled selected>Select</option>
-                                                        <option value="lakilaki">Laki - Laki</option>
-                                                        <option value="perempuan">Perempuan</option>
+                                                        <option value="male">Laki - Laki</option>
+                                                        <option value="female">Perempuan</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="basicpill-firstname-input"
+                                                        class="form-label">Pekerjaan</label>
+                                                    <input name="pekerjaan" type="text"
+                                                        class="form-control disabled-input"
+                                                        id="basicpill-firstname-input"
+                                                        placeholder="Masukkan Pekerjaan">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="basicpill-firstname-input" class="form-label">No.
+                                                        Telepon</label>
+                                                    <input name="no_telp" type="text"
+                                                        class="form-control disabled-input"
+                                                        id="basicpill-firstname-input"
+                                                        placeholder="Masukkan No. Telepon">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="mb-3">
                                                     <label for="basicpill-address-input"
                                                         class="form-label">Alamat</label>
-                                                    <textarea name="address" id="basicpill-address-input" class="form-control" rows="2"
+                                                    <textarea name="alamat" id="basicpill-address-input" class="form-control" rows="2"
                                                         placeholder="Masukkan Alamat anda"></textarea>
                                                 </div>
                                             </div>
@@ -118,24 +147,20 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="mb-3">
-                                                    <label for="basicpill-address-input" class="form-label">Biografi
+                                                    <label for="basicpill-biografi-input" class="form-label">Biografi
                                                         (opsional)</label>
-                                                    <textarea name="biografi" id="basicpill-address-input" class="form-control" rows="4"
+                                                    <textarea name="biografi" id="basicpill-biografi-input" class="form-control" rows="4"
                                                         placeholder="Ceritakan tentang diri anda"></textarea>
                                                 </div>
                                             </div>
                                         </div>
+                                        <button type="button" class="btn btn-primary" onclick="nextStep()">Next <i
+                                                class="bx bx-chevron-right ms-1"></i></button>
                                     </form>
-                                    <ul class="pager wizard twitter-bs-wizard-pager-link">
-                                        <li class="next"><a href="javascript: void(0);"
-                                                class="btn btn-primary">Next <i
-                                                    class="bx bx-chevron-right ms-1"></i></a></li>
-                                    </ul>
                                 </div>
                             </div>
 
-                            <!-- tab pane -->
-
+                            {{-- =============================================================================================================== --}}
                             <!-- tab pane -->
                             <div class="tab-pane" id="company-document">
                                 <div>
@@ -144,51 +169,50 @@
                                         <p class="card-title-desc">Fill all information below</p>
                                     </div>
                                     <div class="container-sm" style="max-width: 600px;">
-                                        <form>
+                                        <form id="bankform">
+                                            @csrf
                                             <div class="mt-4 mt-lg-0">
                                                 <div class="row mb-4">
                                                     <label for="horizontal-firstname-input"
-                                                        class="col-sm-3 col-form-label">First name</label>
+                                                        class="col-sm-3 col-form-label">Atas Nama</label>
                                                     <div class="col-sm-9">
-                                                        <input type="text" class="form-control"
-                                                            id="horizontal-firstname-input"
-                                                            placeholder="Enter your First Name">
+                                                        <input type="text" class="form-control" name="atasnama"
+                                                            id="horizontal-firstname-input" placeholder="Enter Name">
                                                     </div>
                                                 </div>
                                                 <div class="row mb-4">
                                                     <label for="horizontal-email-input"
-                                                        class="col-sm-3 col-form-label">Email</label>
+                                                        class="col-sm-3 col-form-label">Jenis Bank / Wallet</label>
                                                     <div class="col-sm-9">
-                                                        <input type="email" class="form-control"
+                                                        <input name="bank" type="text" class="form-control"
                                                             id="horizontal-email-input"
-                                                            placeholder="Enter your Email">
+                                                            placeholder="Enter Your Wallet">
                                                     </div>
                                                 </div>
                                                 <div class="row mb-4">
-                                                    <label for="horizontal-password-input"
-                                                        class="col-sm-3 col-form-label">Password</label>
+                                                    <label for="horizontal-email-input"
+                                                        class="col-sm-3 col-form-label">No. Rekening / No. Telepon</label>
                                                     <div class="col-sm-9">
-                                                        <input type="password" class="form-control"
-                                                            id="horizontal-password-input"
-                                                            placeholder="Enter your password">
+                                                        <input name="rekening" type="text" class="form-control"
+                                                            id="horizontal-email-input"
+                                                            placeholder="Enter Number">
                                                     </div>
                                                 </div>
                                             </div>
                                         </form>
                                         <ul class="pager wizard twitter-bs-wizard-pager-link">
-                                            <li class="previous"><a href="javascript: void(0);"
+                                            {{-- <li class="previous"><a href="javascript: void(0);"
                                                     class="btn btn-primary"><i class="bx bx-chevron-left me-1"></i>
-                                                    Previous</a></li>
-                                            <li class="next"><a href="javascript: void(0);"
-                                                    class="btn btn-primary">Next <i
-                                                        class="bx bx-chevron-right ms-1"></i></a></li>
+                                                    Previous</a></li> --}}
                                         </ul>
+                                        <button type="button" class="btn btn-primary" onclick="nextStep1()">Next <i
+                                                class="bx bx-chevron-right ms-1"></i></button>
                                     </div>
                                 </div>
                             </div>
 
+                            {{-- =============================================================================================================== --}}
                             <!-- tab pane -->
-
                             <div class="tab-pane" id="bank-detail">
                                 <div class="card" style="width: 600px; margin: auto; border: none;">
                                     <div class="card-body">
@@ -248,6 +272,62 @@
             </div>
             <!-- end modal -->
             <!-- END layout-wrapper -->
+
+            <script>
+                function nextStep() {
+                    // Ambil form data
+                    var formData = new FormData(document.getElementById('profileForm'));
+
+                    // Kirim data menggunakan AJAX
+                    fetch('{{ route('profile.create', Auth::user()->id) }}', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: formData
+                    }).then(response => {
+                        if (response.ok) {
+                            // Beralih ke bagian berikutnya
+                            document.getElementById('seller-details').style.display = 'none';
+                            document.getElementById('company-document').style.display = 'block';
+                        } else {
+                            // Tangani kesalahan jika ada
+                            return response.json().then(data => {
+                                alert('Error: ' + data.message);
+                            });
+                        }
+                    }).catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+                function nextStep1() {
+                    // Ambil form data
+                    var formData = new FormData(document.getElementById('bankform'));
+
+                    // Kirim data menggunakan AJAX
+                    fetch('{{ route('bank.create', Auth::user()->id) }}', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: formData
+                    }).then(response => {
+                        if (response.ok) {
+                            // Beralih ke bagian berikutnya
+                            document.getElementById('company-document').style.display = 'none';
+                            document.getElementById('bank-detail').style.display = 'block';
+                        } else {
+                            // Tangani kesalahan jika ada
+                            return response.json().then(data => {
+                                alert('Error: ' + data.message);
+                            });
+                        }
+                    }).catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+            </script>
+
 
 
 </x-dashboard-layouts>

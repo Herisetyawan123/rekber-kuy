@@ -83,7 +83,7 @@ class RegisteredUserController extends Controller
         // ]);
         // Simpan data ke database
         $bank = Rekening::create([
-            'id_user' => $id,
+            'user_id' => $id,
             'name' => $request->atasnama, // Ambil ID pengguna yang sedang login
             'jenis' => $request->bank,
             'no_rekening' => $request->rekening,

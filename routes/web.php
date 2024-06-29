@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
@@ -25,9 +26,7 @@ Route::middleware(['auth', CheckProfile::class])->group(function(){
 
 
     // profile
-    Route::get('/profile', function () {
-        return view('pages.profile.index');
-    })->name('profile');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
     // history transaksi
     Route::get('/transaksi/penjual', function () {
@@ -93,4 +92,6 @@ Route::post('/profile/create/{id}', [RegisteredUserController::class, 'storeProf
 Route::post('/bank/create/{id}', [RegisteredUserController::class, 'storeBank'])->name('bank.create');
 
 Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+
+Route::post('/profile/upload', [ProfileController::class, 'uploadProfile'])->name('user.avatar.edit');
 

@@ -93,7 +93,7 @@
                     </div> --}}
                     <!-- end col -->
                     <div class="col-xxl-12 col-lg-12 col-md-12">
-                        <div class="wrapper-auth" style="position: absolute; z-index: 4; background-color: #fff; left: 50%; transform: translateX(-50%); min-width: 550px;">
+                        <div class="wrapper-auth" style="position: absolute; z-index: 4; background-color: #fff; left: 50%; transform: translateX(-50%); min-width: 40px;">
 
                             {{$slot}}
                             

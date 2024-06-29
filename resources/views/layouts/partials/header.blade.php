@@ -185,7 +185,8 @@
                                             <h6 class="mb-1">Your item is shipped</h6>
                                             <div class="font-size-13 text-muted">
                                                 <p class="mb-1">If several languages coalesce the grammar</p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min
+                                                        ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -225,8 +226,9 @@
                         <button type="button" class="btn header-item bg-light-subtle border-start border-end"
                             id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="rounded-circle header-profile-user" src="{{asset('assets/images/users/avatar-1.jpg')}}"
-                                alt="Header Avatar">
+                            <img class="rounded-circle header-profile-user"
+                                src="{{ asset(isset(Auth::user()->profile->foto) ? Auth::user()->profile->foto : 'assets/images/users/avatar-2.jpg') }}"
+                                alt="Header Avatar" style="object-fit: cover; object-position: center" >
                             <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ Auth::user()->name }}</span>
                             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                         </button>

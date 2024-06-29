@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('jenis');
             $table->string('no_rekening');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

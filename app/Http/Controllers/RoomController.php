@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chat;
+use App\Models\ChatMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class RoomController extends Controller
 {
-    public function generateCode()
+    protected function generateCode()
     {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $code = 'NG-';
@@ -78,5 +79,16 @@ class RoomController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function chat(Request $request)
+    {
+        $chat = ChatMessage::create([
+            'message' => $request->message,
+            'user_id' => Auth::user()->id,
+            'chat_id' => $request->chat_id
+        ]);
+
+        return redirect()->back();
     }
 }

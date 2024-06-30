@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="chat-conversation p-3 px-2" data-simplebar>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="list-unstyled mb-0" id="chat-content-scroll-to-bottom">
                         <li class="chat-day-title">
                             <span class="title">Today</span>
                         </li>
@@ -54,10 +54,12 @@
                 </div>
 
                 <div class="p-3 border-top">
-                    <div class="row">
+                    <form action="{{ route('chat.store') }}" class="row" method="POST">
+                        @csrf
+                        <input type="hidden" value="{{ $rooms->id }}" name="chat_id">
                         <div class="col">
                             <div class="position-relative">
-                                <input type="text" class="form-control border bg-light-subtle"
+                                <input name="message" type="text" class="form-control border bg-light-subtle"
                                     placeholder="Enter Message...">
                             </div>
                         </div>
@@ -66,7 +68,7 @@
                                     class="d-none d-sm-inline-block me-2">Send</span> <i
                                     class="mdi mdi-send float-end"></i></button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -99,4 +101,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function autoScroll() {
+            var scrollable = document.getElementById('chat-content-scroll-to-bottom');
+            scrollable.scrollTop = scrollable.scrollHeight;
+        }
+
+        document.addEventListener('DOMContentLoaded', autoScroll)
+
+        // Panggil fungsi autoScroll setiap kali chat diperbarui (misalnya setelah form disubmit)
+        const chatForm = document.querySelector('form[action="{{ route('chat.store') }}"]');
+        chatForm.addEventListener('submit', function() {
+            setTimeout(autoScroll, 100); // Tambahkan sedikit delay untuk memastikan chat ditambahkan
+        });
+    </script>
 </x-dashboard-layouts>

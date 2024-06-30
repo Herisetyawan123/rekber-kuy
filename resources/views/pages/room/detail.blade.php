@@ -101,7 +101,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
     <script>
         function autoScroll() {
@@ -117,6 +116,5 @@
             setTimeout(autoScroll, 100); // Tambahkan sedikit delay untuk memastikan chat ditambahkan
         });
     </script>
-=======
->>>>>>> caf01c4 (feat: refactory)
+
 </x-dashboard-layouts>

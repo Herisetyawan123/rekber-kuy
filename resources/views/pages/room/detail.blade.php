@@ -116,5 +116,4 @@
             setTimeout(autoScroll, 100); // Tambahkan sedikit delay untuk memastikan chat ditambahkan
         });
     </script>
-
 </x-dashboard-layouts>

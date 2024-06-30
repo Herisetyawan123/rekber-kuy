@@ -25,8 +25,8 @@
                         <div class="col-xl-4 col-7">
                             <div class="d-flex align-items-center">
                                 <div class="flex-shrink-0 avatar-sm me-3 d-sm-block d-none">
-                                    <img src="{{ asset(isset($room->user->foto) ? $room->user->foto : 'assets/images/users/avatar-2.jpg') }}" alt=""
-                                        class="img-fluid d-block rounded-circle">
+                                    <img src="{{ asset(isset($room->user->foto) ? $room->user->foto : 'assets/images/users/avatar-2.jpg') }}"
+                                        alt="" class="img-fluid d-block rounded-circle">
                                 </div>
                                 <div class="flex-grow-1">
                                     <h5 class="font-size-14 mb-1 text-truncate"><a href="#"
@@ -47,200 +47,9 @@
                         <li class="chat-day-title">
                             <span class="title">Today</span>
                         </li>
-                        <li>
-                            <div class="conversation-list">
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Jennie
-                                                Sherlock</a> <span class="time">10:00</span></h5>
-                                        <p class="mb-0">Good morning !</p>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-
-                        <li class="right">
-                            <div class="conversation-list">
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Shawn</a>
-                                            <span class="time">10:02</span></h5>
-                                        <p class="mb-0">Good morning</p>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="conversation-list">
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Jennie
-                                                Sherlock</a> <span class="time">10:04</span></h5>
-                                        <p class="mb-0">
-                                            Hello!
-                                        </p>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Jennie
-                                                Sherlock</a> <span class="time">10:04</span></h5>
-                                        <p class="mb-0">
-                                            What about our next meeting?
-                                        </p>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="conversation-list">
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Jennie
-                                                Sherlock</a> <span class="time">10:06</span></h5>
-                                        <p class="mb-0">
-                                            Next meeting tomorrow 10.00AM
-                                        </p>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-
-                        <li class="right">
-                            <div class="conversation-list">
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Shawn</a>
-                                            <span class="time">10:08</span></h5>
-                                        <p class="mb-0">
-                                            Wow that's great
-                                        </p>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="conversation-list">
-                                <div class="ctext-wrap">
-                                    <div class="ctext-wrap-content">
-                                        <h5 class="conversation-name"><a href="#" class="user-name">Jennie
-                                                Sherlock</a> <span class="time">10:09</span></h5>
-                                        <p class="mb-0">
-                                            img-1.jpg & img-2.jpg images for a New Projects
-                                        </p>
-
-                                        <ul class="list-inline message-img mt-3  mb-0">
-                                            <li class="list-inline-item message-img-list">
-                                                <a class="d-inline-block m-1" href="">
-                                                    <img src="assets/images/small/img-1.jpg" alt=""
-                                                        class="rounded img-thumbnail">
-                                                </a>
-                                            </li>
-
-                                            <li class="list-inline-item message-img-list">
-                                                <a class="d-inline-block m-1" href="">
-                                                    <img src="assets/images/small/img-2.jpg" alt=""
-                                                        class="rounded img-thumbnail">
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown align-self-start">
-                                        <a class="dropdown-toggle" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Copy</a>
-                                            <a class="dropdown-item" href="#">Save</a>
-                                            <a class="dropdown-item" href="#">Forward</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        @foreach ($rooms->messages as $message)
+                            <x-bubble-chat :position="Auth::user()->id == $message->user_id ? 'right' : ''" :message="$message" />
+                        @endforeach
                     </ul>
                 </div>
 
@@ -253,8 +62,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <button type="submit"
-                                class="btn btn-primary chat-send w-md waves-effect waves-light"><span
+                            <button type="submit" class="btn btn-primary chat-send w-md waves-effect waves-light"><span
                                     class="d-none d-sm-inline-block me-2">Send</span> <i
                                     class="mdi mdi-send float-end"></i></button>
                         </div>

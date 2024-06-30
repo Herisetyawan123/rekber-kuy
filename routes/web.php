@@ -8,22 +8,22 @@ use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
 // register
-Route::controller(RegisteredUserController::class)->group(function(){
+Route::controller(RegisteredUserController::class)->group(function () {
     Route::get('/register', 'create')->name('register');
     Route::post('/register', 'store')->name('register');
 });
 
 // auth login
-Route::controller(AuthenticatedSessionController::class)->group(function(){
+Route::controller(AuthenticatedSessionController::class)->group(function () {
     Route::get('/login', 'create')->name('login');
     Route::post('/login', 'store')->name('login');
 });
 
 // after dashboard
-Route::middleware(['auth', CheckProfile::class])->group(function(){
+Route::middleware(['auth', CheckProfile::class])->group(function () {
     Route::get('/dashboard', function () {
         return view('pages.dashboard.index');
-    })->name('home');    
+    })->name('home');
 
 
     // profile
@@ -46,9 +46,9 @@ Route::middleware(['auth', CheckProfile::class])->group(function(){
     })->name('transaksi.detail.pembeli');
 
     // index chat
-    Route::resource('/room-penjual' , RoomController::class);
+    Route::resource('/room-penjual', RoomController::class);
     Route::post('/chat', [RoomController::class, 'chat'])->name('chat.store');
-    
+
     Route::get('/room/pembeli', function () {
         return view('pages.room.index');
     })->name('room.pembeli');
@@ -67,14 +67,11 @@ Route::middleware(['auth', CheckProfile::class])->group(function(){
     Route::get('/invoice/detail', function () {
         return view('pages.invoice.detail');
     })->name('invoice.detail');
-    
+
     // profile cteate
     Route::get('/biodata', function () {
         return view('pages.profile.create');
     })->name('biodata');
-    
-    
-    
 });
 
 
@@ -95,4 +92,3 @@ Route::post('/bank/create/{id}', [RegisteredUserController::class, 'storeBank'])
 Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 Route::post('/profile/upload', [ProfileController::class, 'uploadProfile'])->name('user.avatar.edit');
-

@@ -20,7 +20,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                    <a href="{{ route('room.penjual') }}" class="dropdown-item" data-key="t-forms">Chat</a>
+                                    <a href="{{ route('room-penjual.index') }}" class="dropdown-item" data-key="t-forms">Room Chat</a>
 
                                     <a href="{{ route('transaksi.penjual') }}" class="dropdown-item"
                                     data-key="t-tables">Transaksi List</a>
@@ -36,7 +36,7 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
-                                    <a href="{{ route('room.pembeli') }}" class="dropdown-item" data-key="t-authentication">Chat</a>
+                                    <a href="{{ route('room.pembeli') }}" class="dropdown-item" data-key="t-authentication">Room Chat</a>
 
                                     <a href="{{ route('transaksi.pembeli') }}" class="dropdown-item"
                                     data-key="t-utility">Transaksi List</a>

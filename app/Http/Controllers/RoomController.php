@@ -50,7 +50,8 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        return view('pages.room.detail');
+        $rooms = Chat::where('code', '=', $id)->first();
+        return view('pages.room.detail', compact('rooms'));
     }
 
     /**

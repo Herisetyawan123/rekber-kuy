@@ -49,11 +49,11 @@ Route::middleware(['auth', CheckProfile::class])->group(function(){
     Route::resource('/room-penjual' , RoomController::class);
     
     Route::get('/room/pembeli', function () {
-        return view('pages.chat.index');
+        return view('pages.room.index');
     })->name('room.pembeli');
 
     Route::get('/room/{code}', function () {
-        return view('pages.chat.detail');
+        return view('pages.room.detail');
     })->name('chat');
 
 

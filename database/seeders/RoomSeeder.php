@@ -19,6 +19,7 @@ class RoomSeeder extends Seeder
         $user = User::where('email', 'user@mail.com')->first();
         if($user){
             $chat = Chat::create([
+                'title' => 'Jual Beli Manok',
                 'code' => Str::random(5),
                 'user_id' => $user->id,
             ]);

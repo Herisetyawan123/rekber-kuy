@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 class RoomController extends Controller
 {
-    public function generateCode() {
+    public function generateCode()
+    {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $code = 'NG-';
         for ($i = 0; $i < 4; $i++) {

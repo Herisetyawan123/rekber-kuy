@@ -20,7 +20,7 @@ class RoomController extends Controller
     public function index()
     {
         $rooms = Chat::where('user_id', '=', Auth::user()->id)->get();
-        return view('pages.chat.index', compact('rooms'));
+        return view('pages.room.index', compact('rooms'));
     }
 
     /**
@@ -50,7 +50,7 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        return view('pages.chat.detail');
+        return view('pages.room.detail');
     }
 
     /**

@@ -25,8 +25,8 @@
                         <div class="col-xl-4 col-7">
                             <div class="d-flex align-items-center">
                                 <div class="flex-shrink-0 avatar-sm me-3 d-sm-block d-none">
-                                    <img src="{{ asset(isset($room->user->foto) ? $room->user->foto : 'assets/images/users/avatar-2.jpg') }}"
-                                        alt="" class="img-fluid d-block rounded-circle">
+                                    <img src="{{ asset(isset($room->user->foto) ? $room->user->foto : 'assets/images/users/avatar-2.jpg') }}" alt=""
+                                        class="img-fluid d-block rounded-circle">
                                 </div>
                                 <div class="flex-grow-1">
                                     <h5 class="font-size-14 mb-1 text-truncate"><a href="#"

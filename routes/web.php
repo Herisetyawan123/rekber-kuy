@@ -46,9 +46,9 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     })->name('transaksi.detail.pembeli');
 
     // index chat
-    Route::resource('/room-penjual' , RoomController::class);
+    Route::resource('/room-penjual', RoomController::class);
     Route::post('/chat', [RoomController::class, 'chat'])->name('chat.store');
-    
+
     Route::get('/room/pembeli', function () {
         return view('pages.room.index');
     })->name('room.pembeli');

@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chat;
-use App\Models\ChatMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class RoomController extends Controller
 {
-    protected function generateCode()
-    {
+    public function generateCode() {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $code = 'NG-';
         for ($i = 0; $i < 4; $i++) {
@@ -22,7 +20,7 @@ class RoomController extends Controller
     public function index()
     {
         $rooms = Chat::where('user_id', '=', Auth::user()->id)->get();
-        return view('pages.room.index', compact('rooms'));
+        return view('pages.chat.index', compact('rooms'));
     }
 
     /**

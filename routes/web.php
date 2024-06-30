@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoomController;
 use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
@@ -45,9 +46,8 @@ Route::middleware(['auth', CheckProfile::class])->group(function(){
     })->name('transaksi.detail.pembeli');
 
     // index chat
-    Route::get('/room/penjual', function () {
-        return view('pages.chat.index');
-    })->name('room.penjual');
+    Route::resource('/room-penjual' , RoomController::class);
+    
     Route::get('/room/pembeli', function () {
         return view('pages.chat.index');
     })->name('room.pembeli');

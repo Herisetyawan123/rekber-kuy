@@ -37,7 +37,8 @@
                     </ul>
                 </div>
                 <div>
-                    <a href="#" class="btn btn-light"><i class="bx bx-plus me-1"></i> Add New</a>
+                    <button class="btn btn-light" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="bx bx-plus me-1"></i> Add New</button>
                 </div>
                 
                 <div class="dropdown">
@@ -58,6 +59,7 @@
     <!-- end row -->
 
     <div class="row">
+        @foreach ($rooms as $room)
         <div class="col-xl-3 col-sm-6">
             <div class="card text-center">
                 <div class="card-body">
@@ -76,20 +78,21 @@
                     <div class="mx-auto mb-4">
                         <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
                     </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">Phyllis Gatlin</a></h5>
-                    <p class="text-muted mb-2">Full Stack Developer</p>
+                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">{{ $room->title }}</a></h5>
+                    <p class="text-muted mb-2">{{ $room->user->name }}</p>
                     <span class="badge bg-success">Success</span>
                     
                 </div>
 
                 <div class="btn-group" role="group">
                     <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</a>
-                    <a href="{{ route('chat', 'asidaoisnd') }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+                    <a href="{{ route('room-penjual.show', $room->code) }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
 
                 </div>
             </div>
             <!-- end card -->
         </div>
+        @endforeach
         <!-- end col -->
     </div>
     <!-- end row -->
@@ -129,5 +132,29 @@
         </div>
     </div>
     <!-- end row -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" action="{{ route('room-penjual.store') }}" method="POST">
+                @csrf
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Room</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Title</label>
+                            <input name="title" type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
     
 </x-dashboard-layouts>

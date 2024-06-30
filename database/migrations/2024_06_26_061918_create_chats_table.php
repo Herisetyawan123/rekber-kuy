@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
             $table->string('code');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('penjual_id');
+            $table->unsignedBigInteger('pembeli_id');
+            $table->foreign('penjual_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('pembeli_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

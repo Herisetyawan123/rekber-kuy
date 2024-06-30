@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class RoomController extends Controller
 {
-    public function generateCode() {
+    public function generateCode()
+    {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $code = 'NG-';
         for ($i = 0; $i < 4; $i++) {
@@ -50,7 +51,8 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        $rooms = Chat::where('code', '=', $id)->first();
+        $rooms = Chat::with('messages')->where('code', '=', $id)->first();
+        // dd($rooms);
         return view('pages.room.detail', compact('rooms'));
     }
 

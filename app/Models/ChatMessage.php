@@ -11,4 +11,8 @@ class ChatMessage extends Model
 
     protected $guarded = ['id'];
 
+    public function sender()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

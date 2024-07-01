@@ -85,6 +85,8 @@ class RoomController extends Controller
             return redirect()->back();
         }
         return redirect()->back();
+        //
+
     }
 
     public function chat(Request $request)

@@ -12,9 +12,14 @@ return new class extends Migration
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('code');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->string('code'); 
+            $table->unsignedBigInteger('seller_id');
+            $table->unsignedBigInteger('buyer_id');
             $table->timestamps();
+
+            $table->foreign('seller_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('buyer_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

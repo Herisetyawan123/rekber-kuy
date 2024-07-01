@@ -69,9 +69,14 @@
                         </a>
                     
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#">Edit</a>
+                            <form action="{{ route('room-penjual.destroy', $room->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="dropdown-item">Hapus</button>
+                            </form>
+                            {{-- <a class="dropdown-item" href="#">Edit</a>
                             <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Remove</a>
+                            <a class="dropdown-item" href="{{ route('room-penjual.destroy', $room->id) }}">Remove</a> --}}
                         </div>
                     </div>
                     

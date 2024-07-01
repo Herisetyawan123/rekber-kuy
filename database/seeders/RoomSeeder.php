@@ -20,15 +20,16 @@ class RoomSeeder extends Seeder
         if($user){
             $chat = Chat::create([
                 'title' => 'Jual Beli Manok',
-                'code' => Str::random(5),
-                'user_id' => $user->id,
+                'code' => Str::random(10),
+                'seller_id' => $user->id,
+                'buyer_id' => $user->id,
             ]);
 
-            $transaction = Transaction::create([
-                'room_id' => $chat->id,
-                'seller_id' => $user->id,
-                'amount' => 100000,
-            ]);
+            // $transaction = Transaction::create([
+            //     'room_id' => $chat->id,
+            //     'seller_id' => $user->id,
+            //     'amount' => 100000,
+            // ]);
         }
     }
 }

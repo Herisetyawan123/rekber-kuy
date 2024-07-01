@@ -78,7 +78,13 @@ class RoomController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $chat = Chat::find($id);
+        // Check if chat exists and belongs to the authenticated user
+        if ($chat && $chat->user_id == Auth::user()->id) {
+            $chat->delete();
+            return redirect()->back();
+        }
+        return redirect()->back();
     }
 
     public function chat(Request $request)

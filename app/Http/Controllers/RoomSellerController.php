@@ -27,7 +27,7 @@ class RoomSellerController extends Controller
 
     public function index()
     {
-        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->get();
+        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->orderBy('id',  'DESC')->get();
         return view('pages.room.index', compact('rooms'));
     }
 
@@ -50,8 +50,7 @@ class RoomSellerController extends Controller
             'seller_id' => Auth::user()->id,
         ]);
 
-        return redirect()->back()->with('success', 'room berhasil di buat');
-        // return response()->json(['code' => 'room berhasil di buat']);
+        return redirect()->back()->with('success', '');
     }
 
     /**

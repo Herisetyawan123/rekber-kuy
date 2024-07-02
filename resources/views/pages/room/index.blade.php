@@ -29,23 +29,41 @@
                 <div>
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="top" title="List"><i class="bx bx-list-ul"></i></a>
+                            <a class="nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="List"><i class="bx bx-list-ul"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i class="bx bx-grid-alt"></i></a>
+                            <a class="nav-link active" href="" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Grid"><i class="bx bx-grid-alt"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <button class="btn btn-light" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="bx bx-plus me-1"></i> Add New</button>
+
+                    @if (Route::currentRouteName() == 'room-penjual.index')
+                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            data-bs-whatever="@mdo">
+                            <i class="bx bx-plus me-1"></i>Add Room
+                        </button>
+                    @elseif (Route::currentRouteName() == 'room.pembeli')
+                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            data-bs-whatever="@mdo">
+                            <i class="bx bx-plus me-1"></i>Join Room
+                        </button>
+                    @endif
+                    {{-- <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo"><i class="bx bx-plus me-1"></i> Add New</button>
+
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo"><i class="bx bx-plus me-1"></i> Add New</button> --}}
                 </div>
-                
+
                 <div class="dropdown">
-                    <a class="btn btn-link text-muted py-1 font-size-16 shadow-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-link text-muted py-1 font-size-16 shadow-none dropdown-toggle" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bx bx-dots-horizontal-rounded"></i>
                     </a>
-                
+
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -60,43 +78,48 @@
 
     <div class="row">
         @foreach ($rooms as $room)
-        <div class="col-xl-3 col-sm-6">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="dropdown text-end">
-                        <a class="text-muted dropdown-toggle font-size-16" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                            <i class="bx bx-dots-horizontal-rounded"></i>
-                        </a>
-                    
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <form action="{{ route('room-penjual.destroy', $room->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="dropdown-item">Hapus</button>
-                            </form>
-                            {{-- <a class="dropdown-item" href="#">Edit</a>
+            <div class="col-xl-3 col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="dropdown text-end">
+                            <a class="text-muted dropdown-toggle font-size-16" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true">
+                                <i class="bx bx-dots-horizontal-rounded"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <form action="{{ route('room-penjual.destroy', $room->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="dropdown-item">Hapus</button>
+                                </form>
+                                {{-- <a class="dropdown-item" href="#">Edit</a>
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="{{ route('room-penjual.destroy', $room->id) }}">Remove</a> --}}
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="mx-auto mb-4">
-                        <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-xl rounded-circle img-thumbnail">
-                    </div>
-                    <h5 class="font-size-16 mb-1"><a href="#" class="text-body">{{ $room->title }}</a></h5>
-                    <p class="text-muted mb-2">{{ $room->user->name }}</p>
-                    <span class="badge bg-success">Success</span>
-                    
-                </div>
 
-                <div class="btn-group" role="group">
-                    <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</a>
-                    <a href="{{ route('room-penjual.show', $room->code) }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+                        <div class="mx-auto mb-4">
+                            <img src="{{ asset('assets/images/users/avatar-2.jpg') }}" alt=""
+                                class="avatar-xl rounded-circle img-thumbnail">
+                        </div>
+                        <h5 class="font-size-16 mb-1"><a href="#" class="text-body">{{ $room->title }}</a></h5>
+                        <p class="text-muted mb-2">{{ $room->user->name }}</p>
+                        <span class="badge bg-success">Success</span>
 
+                    </div>
+
+                    <div class="btn-group" role="group">
+                        <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i
+                                class="uil uil-user me-1"></i> Profile</a>
+                        <a href="{{ route('room-penjual.show', $room->code) }}" type="button"
+                            class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i>
+                            Message</a>
+
+                    </div>
                 </div>
+                <!-- end card -->
             </div>
-            <!-- end card -->
-        </div>
         @endforeach
         <!-- end col -->
     </div>
@@ -138,7 +161,8 @@
     </div>
     <!-- end row -->
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <form class="modal-content" action="{{ route('room-penjual.store') }}" method="POST">
                 @csrf
@@ -161,5 +185,5 @@
             </form>
         </div>
     </div>
-    
+
 </x-dashboard-layouts>

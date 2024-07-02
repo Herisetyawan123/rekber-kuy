@@ -13,15 +13,21 @@ class RoomController extends Controller
     {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $code = 'NG-';
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $code .= $characters[random_int(0, strlen($characters) - 1)];
         }
         return $code;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $rooms = Chat::where('user_id', '=', Auth::user()->id)->get();
+        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->get();
+        return view('pages.room.index', compact('rooms'));
+    }
+
+    public function indexPembeli()
+    {
+        $rooms = Chat::where('buyer_id', '=', Auth::user()->id)->get();
         return view('pages.room.index', compact('rooms'));
     }
 

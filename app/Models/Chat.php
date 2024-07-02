@@ -11,9 +11,13 @@ class Chat extends Model
 
     protected $guarded = ['id'];
 
-    public function user()
+    public function seller()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'seller_id');
+    }
+    public function buyer()
+    {
+        return $this->belongsTo(User::class, 'buyer_id');
     }
 
     public function messages()

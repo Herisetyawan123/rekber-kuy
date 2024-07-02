@@ -7,7 +7,7 @@ use App\Models\ChatMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class RoomController extends Controller
+class RoomSellerController extends Controller
 {
     protected function generateCode()
     {
@@ -19,15 +19,15 @@ class RoomController extends Controller
         return $code;
     }
 
-    public function index(Request $request)
+    public function getCode($id)
     {
-        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->get();
-        return view('pages.room.index', compact('rooms'));
+        $chat = Chat::findOrFail($id);
+        return response()->json(['code' => $chat->code]);
     }
 
-    public function indexPembeli()
+    public function index()
     {
-        $rooms = Chat::where('buyer_id', '=', Auth::user()->id)->get();
+        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->get();
         return view('pages.room.index', compact('rooms'));
     }
 
@@ -47,7 +47,7 @@ class RoomController extends Controller
         Chat::create([
             'code' => $this->generateCode(),
             'title' => $request->title,
-            'user_id' => Auth::user()->id,
+            'seller_id' => Auth::user()->id,
         ]);
 
         return redirect()->back()->with('success', 'room berhasil di buat');
@@ -58,7 +58,7 @@ class RoomController extends Controller
      */
     public function show(string $id)
     {
-        $rooms = Chat::with('messages')->where('code', '=', $id)->first();
+        $rooms = Chat::with(['messages', 'seller'])->where('code', '=', $id)->first();
         // dd($rooms);
         return view('pages.room.detail', compact('rooms'));
     }

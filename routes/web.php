@@ -3,7 +3,8 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\RoomController;
+use App\Http\Controllers\RoomBuyerController;
+use App\Http\Controllers\RoomSellerController;
 use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,7 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
 
     // profile
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/profile/upload', [ProfileController::class, 'uploadProfile'])->name('user.avatar.edit');
 
     // history transaksi
     Route::get('/transaksi/penjual', function () {
@@ -45,12 +47,15 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
         return view('pages.transaksi.detail');
     })->name('transaksi.detail.pembeli');
 
-    // index chat
-    Route::resource('/room-penjual', RoomController::class);
-    Route::resource('/room-pembeli', RoomController::class);
-    Route::get('/room-pembeli', [RoomController::class, 'indexPembeli'])->name('room.pembeli');
+    // Room Seller
+    Route::resource('/room-seller', RoomSellerController::class);
+    Route::get('/get-code/{id}', [RoomSellerController::class, 'getCode'])->name('get-code');
+    Route::post('/chat/', [RoomSellerController::class, 'chat'])->name('chat.store');
 
-    Route::post('/chat', [RoomController::class, 'chat'])->name('chat.store');
+    // Room Buyer
+    Route::resource('/room-buyer', RoomBuyerController::class);
+
+
 
     Route::get('/room/{code}', function () {
         return view('pages.room.detail');
@@ -89,5 +94,3 @@ Route::post('/profile/create/{id}', [RegisteredUserController::class, 'storeProf
 Route::post('/bank/create/{id}', [RegisteredUserController::class, 'storeBank'])->name('bank.create');
 
 Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
-
-Route::post('/profile/upload', [ProfileController::class, 'uploadProfile'])->name('user.avatar.edit');

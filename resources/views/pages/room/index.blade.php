@@ -40,12 +40,12 @@
                 </div>
                 <div>
 
-                    @if (Route::currentRouteName() == 'room-penjual.index')
+                    @if (Route::currentRouteName() == 'room-seller.index')
                         <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
                             data-bs-whatever="@mdo">
                             <i class="bx bx-plus me-1"></i>Add Room
                         </button>
-                    @elseif (Route::currentRouteName() == 'room.pembeli')
+                    @elseif (Route::currentRouteName() == 'room-buyer.index')
                         <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
                             data-bs-whatever="@mdo">
                             <i class="bx bx-plus me-1"></i>Join Room
@@ -88,14 +88,14 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end">
-                                <form action="{{ route('room-penjual.destroy', $room->id) }}" method="POST">
+                                <form action="{{ route('room-seller.destroy', $room->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="dropdown-item">Hapus</button>
                                 </form>
                                 {{-- <a class="dropdown-item" href="#">Edit</a>
                             <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="{{ route('room-penjual.destroy', $room->id) }}">Remove</a> --}}
+                            <a class="dropdown-item" href="{{ route('room-seller.destroy', $room->id) }}">Remove</a> --}}
                             </div>
                         </div>
 
@@ -104,7 +104,7 @@
                                 class="avatar-xl rounded-circle img-thumbnail">
                         </div>
                         <h5 class="font-size-16 mb-1"><a href="#" class="text-body">{{ $room->title }}</a></h5>
-                        <p class="text-muted mb-2">{{ $room->user->name }}</p>
+                        <p class="text-muted mb-2">{{ $room->seller->name }}</p>
                         <span class="badge bg-success">Success</span>
 
                     </div>
@@ -112,7 +112,11 @@
                     <div class="btn-group" role="group">
                         <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i
                                 class="uil uil-user me-1"></i> Profile</a>
-                        <a href="{{ route('room-penjual.show', $room->code) }}" type="button"
+                        <a href="#" class="btn btn-outline-light text-truncate copy-code"
+                            data-id="{{ $room->id }}">
+                            <i class="uil uil-user me-1"></i> Share
+                        </a>
+                        <a href="{{ route('room-seller.show', $room->code) }}" type="button"
                             class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i>
                             Message</a>
 
@@ -164,7 +168,7 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
-            <form class="modal-content" action="{{ route('room-penjual.store') }}" method="POST">
+            <form class="modal-content" action="{{ route('room-seller.store') }}" method="POST">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Create Room</h5>
@@ -185,5 +189,34 @@
             </form>
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('.copy-code').forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    let chatId = this.getAttribute('data-id');
+    
+                    fetch(`/get-code/${chatId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            let code = data.code;
+    
+                            // Create a temporary textarea to copy the code
+                            let textarea = document.createElement('textarea');
+                            textarea.value = code;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+    
+                            alert('Code copied to clipboard: ' + code);
+                        })
+                        .catch(error => console.error('Error:', error));
+                });
+            });
+        });
+    </script>
 
 </x-dashboard-layouts>

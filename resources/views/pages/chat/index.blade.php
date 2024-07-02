@@ -86,7 +86,7 @@
 
                 <div class="btn-group" role="group">
                     <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i class="uil uil-user me-1"></i> Profile</a>
-                    <a href="{{ route('room-penjual.show', $room->code) }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
+                    <a href="{{ route('room-seller.show', $room->code) }}" type="button" class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i> Message</a>
 
                 </div>
             </div>
@@ -135,7 +135,7 @@
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <form class="modal-content" action="{{ route('room-penjual.store') }}" method="POST">
+            <form class="modal-content" action="{{ route('room-seller.store') }}" method="POST">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Create Room</h5>

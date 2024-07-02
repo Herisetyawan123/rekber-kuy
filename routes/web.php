@@ -8,17 +8,7 @@ use App\Http\Controllers\RoomSellerController;
 use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
-// register
-Route::controller(RegisteredUserController::class)->group(function () {
-    Route::get('/register', 'create')->name('register');
-    Route::post('/register', 'store')->name('register');
-});
-
-// auth login
-Route::controller(AuthenticatedSessionController::class)->group(function () {
-    Route::get('/login', 'create')->name('login');
-    Route::post('/login', 'store')->name('login');
-});
+require_once __DIR__."/auth/login.php";
 
 // after dashboard
 Route::middleware(['auth', CheckProfile::class])->group(function () {
@@ -85,12 +75,4 @@ Route::get('/', function () {
 })->name('kontol');
 
 
-// profile cteate
-Route::get('/biodata', function () {
-    return view('pages.profile.create');
-})->name('biodata');
-
-Route::post('/profile/create/{id}', [RegisteredUserController::class, 'storeProfile'])->name('profile.create');
-Route::post('/bank/create/{id}', [RegisteredUserController::class, 'storeBank'])->name('bank.create');
-
-Route::delete('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+require_once __DIR__."/auth/register.php";

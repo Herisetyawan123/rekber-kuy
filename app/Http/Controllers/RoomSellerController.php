@@ -50,7 +50,7 @@ class RoomSellerController extends Controller
             'seller_id' => Auth::user()->id,
         ]);
 
-        return redirect()->back()->with('success', '');
+        return redirect()->back()->with('success', 'Room Berhasil Dibuat');
     }
 
     /**
@@ -86,9 +86,9 @@ class RoomSellerController extends Controller
     {
         $chat = Chat::find($id);
         // Check if chat exists and belongs to the authenticated user
-        if ($chat && $chat->user_id == Auth::user()->id) {
+        if ($chat && $chat->seller_id == Auth::user()->id) {
             $chat->delete();
-            return redirect()->back();
+            return redirect()->back()->with('success', 'Room berhasil dihapus');
         }
         return redirect()->back();
     }

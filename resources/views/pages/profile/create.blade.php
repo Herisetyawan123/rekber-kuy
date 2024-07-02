@@ -266,22 +266,23 @@
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-light w-md" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary w-md" data-bs-dismiss="modal">Save
-                        changes</button>
+                    <a href="{{ route('home') }}" type="button" class="btn btn-primary w-md"
+                        data-bs-dismiss="modal">Save
+                        changes</a>
                 </div>
             </div>
             <!-- end modal -->
             <!-- END layout-wrapper -->
 
             <script>
-                function nextStep() {
+                async function nextStep() {
                     // Ambil form data
                     var formData = new FormData(document.getElementById('profileForm'));
 
                     try {
 
                         // Kirim data menggunakan AJAX
-                        fetch('{{ route('profile.create', Auth::user()->id) }}', {
+                        await fetch('{{ route('profile.create', Auth::user()->id) }}', {
                             method: 'POST',
                             headers: {
                                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -299,10 +300,34 @@
                                 });
                             }
                         }).catch(error => {
-                            throw ""
+                            for (const key in formData.keys()) {
+                                console.log(key)
+                            }
+                            let filled = false;
+
+                            formData.keys().toArray().forEach(element => {
+                                filled = formData.get(element) == ''
+                            });
+                            console.log(filled)
+                            if (filled) {
+                                throw "Isi Semua inputan";
+                            }
                         });
                     } catch (error) {
-
+                        Toastify({
+                            text: error,
+                            duration: 2000,
+                            newWindow: true,
+                            close: true,
+                            gravity: "top", // `top` or `bottom`
+                            position: "right", // `left`, `center` or `right`
+                            stopOnFocus: true, // Prevents dismissing of toast on hover
+                            style: {
+                                background: "#fd625e",
+                                fontSize: "16px",
+                            },
+                            onClick: function() {} // Callback after click
+                        }).showToast();
                     }
                 }
 

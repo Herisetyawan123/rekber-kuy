@@ -103,15 +103,4 @@ class RoomController extends Controller
 
         return redirect()->back();
     }
-
-    public function chat(Request $request)
-    {
-        $chat = ChatMessage::create([
-            'message' => $request->message,
-            'user_id' => Auth::user()->id,
-            'chat_id' => $request->chat_id
-        ]);
-
-        return redirect()->back();
-    }
 }

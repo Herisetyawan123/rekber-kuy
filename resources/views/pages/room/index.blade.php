@@ -20,7 +20,7 @@
     <div class="row align-items-center">
         <div class="col-md-6">
             <div class="mb-3">
-                <h5 class="card-title">Contact List <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                <h5 class="card-title">Contact List <span class="text-muted fw-normal">({{ count($rooms) }})</span></h5>
             </div>
         </div>
 
@@ -107,8 +107,7 @@
                     <div class="btn-group" role="group">
                         <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i
                                 class="uil uil-user me-1"></i> Profile</a>
-                        <a href="javascript: void(0);"
-                            class="btn btn-outline-light text-truncate copy-code"
+                        <a href="javascript: void(0);" class="btn btn-outline-light text-truncate copy-code"
                             data-id="{{ $room->id }}">
                             <i class="uil uil-user me-1"></i> Share
                         </a>
@@ -162,8 +161,7 @@
     <!-- end row -->
 
     {{-- Modallll --}}
-    <div class="modal fade" id="addRoom" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="addRoom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form class="modal-content" action="{{ route('room-seller.store') }}" method="POST">
                 @csrf
@@ -188,8 +186,7 @@
     </div>
 
     {{-- Modallll --}}
-    <div class="modal fade" id="joinRoom" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="joinRoom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form class="modal-content" action="{{ route('room-buyer.store') }}" method="POST">
                 @csrf
@@ -212,6 +209,27 @@
             </form>
         </div>
     </div>
+
+    @session('success')
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                Toastify({
+                    text: "{{ session('success') }}",
+                    duration: 2000,
+                    newWindow: true,
+                    close: true,
+                    gravity: "bottom", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                        background: "#4B70F5",
+                        fontSize: "16px"
+                    },
+                    onClick: function() {} // Callback after click
+                }).showToast();
+            })
+        </script>
+    @endsession
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {

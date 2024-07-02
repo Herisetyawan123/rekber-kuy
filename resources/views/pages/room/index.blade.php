@@ -112,7 +112,8 @@
                     <div class="btn-group" role="group">
                         <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i
                                 class="uil uil-user me-1"></i> Profile</a>
-                        <a href="#" class="btn btn-outline-light text-truncate copy-code"
+                        <a href="javascript: void(0);" id="alert-success"
+                            class="btn btn-outline-light text-truncate copy-code waves-effect waves-light"
                             data-id="{{ $room->id }}">
                             <i class="uil uil-user me-1"></i> Share
                         </a>
@@ -190,19 +191,18 @@
         </div>
     </div>
 
-
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             document.querySelectorAll('.copy-code').forEach(function(button) {
                 button.addEventListener('click', function(event) {
                     event.preventDefault();
                     let chatId = this.getAttribute('data-id');
-    
+
                     fetch(`/get-code/${chatId}`)
                         .then(response => response.json())
                         .then(data => {
                             let code = data.code;
-    
+
                             // Create a temporary textarea to copy the code
                             let textarea = document.createElement('textarea');
                             textarea.value = code;
@@ -210,8 +210,22 @@
                             textarea.select();
                             document.execCommand('copy');
                             document.body.removeChild(textarea);
-    
-                            alert('Code copied to clipboard: ' + code);
+
+                            // alert('Code copied to clipboard: ' + code);
+                            Toastify({
+                                text: "Copy Room Code : " + code,
+                                duration: 2000,
+                                newWindow: true,
+                                close: true,
+                                gravity: "bottom", // `top` or `bottom`
+                                position: "right", // `left`, `center` or `right`
+                                stopOnFocus: true, // Prevents dismissing of toast on hover
+                                style: {
+                                    background: "#4B70F5",
+                                    fontSize: "16px"
+                                },
+                                onClick: function() {} // Callback after click
+                            }).showToast();
                         })
                         .catch(error => console.error('Error:', error));
                 });

@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('code'); 
             $table->unsignedBigInteger('seller_id');
-            $table->unsignedBigInteger('buyer_id');
+            $table->unsignedBigInteger('buyer_id')->nullable();
             $table->timestamps();
 
             $table->foreign('seller_id')->references('id')->on('users')->onDelete('cascade');

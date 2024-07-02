@@ -51,6 +51,7 @@ class RoomSellerController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'room berhasil di buat');
+        // return response()->json(['code' => 'room berhasil di buat']);
     }
 
     /**

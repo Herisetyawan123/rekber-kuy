@@ -41,21 +41,16 @@
                 <div>
 
                     @if (Route::currentRouteName() == 'room-seller.index')
-                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addRoom"
                             data-bs-whatever="@mdo">
                             <i class="bx bx-plus me-1"></i>Add Room
                         </button>
                     @elseif (Route::currentRouteName() == 'room-buyer.index')
-                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#joinRoom"
                             data-bs-whatever="@mdo">
                             <i class="bx bx-plus me-1"></i>Join Room
                         </button>
                     @endif
-                    {{-- <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo"><i class="bx bx-plus me-1"></i> Add New</button>
-
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo"><i class="bx bx-plus me-1"></i> Add New</button> --}}
                 </div>
 
                 <div class="dropdown">
@@ -112,8 +107,8 @@
                     <div class="btn-group" role="group">
                         <a href="{{ route('profile') }}" class="btn btn-outline-light text-truncate"><i
                                 class="uil uil-user me-1"></i> Profile</a>
-                        <a href="javascript: void(0);" id="alert-success"
-                            class="btn btn-outline-light text-truncate copy-code waves-effect waves-light"
+                        <a href="javascript: void(0);"
+                            class="btn btn-outline-light text-truncate copy-code"
                             data-id="{{ $room->id }}">
                             <i class="uil uil-user me-1"></i> Share
                         </a>
@@ -166,7 +161,8 @@
     </div>
     <!-- end row -->
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    {{-- Modallll --}}
+    <div class="modal fade" id="addRoom" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <form class="modal-content" action="{{ route('room-seller.store') }}" method="POST">
@@ -186,6 +182,32 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{-- Modallll --}}
+    <div class="modal fade" id="joinRoom" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" action="{{ route('room-buyer.store') }}" method="POST">
+                @csrf
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Join Room</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Code Room</label>
+                            <input name="code" type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Join</button>
                 </div>
             </form>
         </div>

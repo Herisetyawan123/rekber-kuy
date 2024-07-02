@@ -22,14 +22,7 @@ class RoomSeeder extends Seeder
                 'title' => 'Jual Beli Manok',
                 'code' => Str::random(10),
                 'seller_id' => $user->id,
-                'buyer_id' => $user->id,
             ]);
-
-            // $transaction = Transaction::create([
-            //     'room_id' => $chat->id,
-            //     'seller_id' => $user->id,
-            //     'amount' => 100000,
-            // ]);
         }
     }
 }

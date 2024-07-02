@@ -191,11 +191,11 @@
                                                 </div>
                                                 <div class="row mb-4">
                                                     <label for="horizontal-email-input"
-                                                        class="col-sm-3 col-form-label">No. Rekening / No. Telepon</label>
+                                                        class="col-sm-3 col-form-label">No. Rekening / No.
+                                                        Telepon</label>
                                                     <div class="col-sm-9">
                                                         <input name="rekening" type="text" class="form-control"
-                                                            id="horizontal-email-input"
-                                                            placeholder="Enter Number">
+                                                            id="horizontal-email-input" placeholder="Enter Number">
                                                     </div>
                                                 </div>
                                             </div>
@@ -278,28 +278,34 @@
                     // Ambil form data
                     var formData = new FormData(document.getElementById('profileForm'));
 
-                    // Kirim data menggunakan AJAX
-                    fetch('{{ route('profile.create', Auth::user()->id) }}', {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                        },
-                        body: formData
-                    }).then(response => {
-                        if (response.ok) {
-                            // Beralih ke bagian berikutnya
-                            document.getElementById('seller-details').style.display = 'none';
-                            document.getElementById('company-document').style.display = 'block';
-                        } else {
-                            // Tangani kesalahan jika ada
-                            return response.json().then(data => {
-                                alert('Error: ' + data.message);
-                            });
-                        }
-                    }).catch(error => {
-                        console.error('Error:', error);
-                    });
+                    try {
+
+                        // Kirim data menggunakan AJAX
+                        fetch('{{ route('profile.create', Auth::user()->id) }}', {
+                            method: 'POST',
+                            headers: {
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                            },
+                            body: formData
+                        }).then(response => {
+                            if (response.ok) {
+                                // Beralih ke bagian berikutnya
+                                document.getElementById('seller-details').style.display = 'none';
+                                document.getElementById('company-document').style.display = 'block';
+                            } else {
+                                // Tangani kesalahan jika ada
+                                return response.json().then(data => {
+                                    alert('Error: ' + data.message);
+                                });
+                            }
+                        }).catch(error => {
+                            throw ""
+                        });
+                    } catch (error) {
+
+                    }
                 }
+
                 function nextStep1() {
                     // Ambil form data
                     var formData = new FormData(document.getElementById('bankform'));

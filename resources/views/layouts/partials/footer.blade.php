@@ -26,15 +26,19 @@
 
 
 <!-- JAVASCRIPT -->
-<script src="{{asset('assets/libs/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('assets/libs/pace-js/pace.min.js')}}"></script>
+<script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/libs/pace-js/pace.min.js') }}"></script>
 
 <!-- twitter-bootstrap-wizard js -->
-<script src="{{asset('assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js')}}"></script>
-<script src="{{asset('assets/libs/twitter-bootstrap-wizard/prettify.js')}}"></script>
+<script src="{{ asset('assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}"></script>
+<script src="{{ asset('assets/libs/twitter-bootstrap-wizard/prettify.js') }}"></script>
 
 <!-- form wizard init -->
-<script src="{{asset('assets/js/pages/form-wizard.init.js')}}"></script>
+<script src="{{ asset('assets/js/pages/form-wizard.init.js') }}"></script>
+
+
+<!-- toast js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 
 </body>

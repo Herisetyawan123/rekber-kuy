@@ -59,8 +59,12 @@ class RoomSellerController extends Controller
     public function show(string $id)
     {
         $rooms = Chat::with(['messages', 'seller'])->where('code', '=', $id)->first();
+        if ($rooms->seller_id == Auth::user()->id)
+        {
+            return view('pages.room.detail', compact('rooms'));
+        }
         // dd($rooms);
-        return view('pages.room.detail', compact('rooms'));
+        return redirect()->back()->with('error', 'Kamu bukan participant');
     }
 
     /**

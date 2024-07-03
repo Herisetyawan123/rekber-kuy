@@ -233,6 +233,26 @@
             })
         </script>
     @endsession
+    @session('error')
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                Toastify({
+                    text: "{{ session('error') }}",
+                    duration: 2000,
+                    newWindow: true,
+                    close: true,
+                    gravity: "bottom", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                        background: "#FF0000",
+                        fontSize: "16px"
+                    },
+                    onClick: function() {} // Callback after click
+                }).showToast();
+            })
+        </script>
+    @endsession
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {

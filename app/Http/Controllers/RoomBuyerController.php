@@ -13,7 +13,7 @@ class RoomBuyerController extends Controller
      */
     public function index()
     {
-        $rooms = Chat::where('buyer_id', '=', Auth::user()->id)->get();
+        $rooms = Chat::where('buyer_id', '=', Auth::user()->id)->paginate(8);
         return view('pages.room.index', compact('rooms'));
     }
 

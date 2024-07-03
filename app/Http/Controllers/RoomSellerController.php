@@ -64,7 +64,7 @@ class RoomSellerController extends Controller
             return view('pages.room.detail', compact('rooms'));
         }
         // dd($rooms);
-        return redirect()->back()->with('error', 'Kamu bukan participant');
+        return redirect()->route('room-seller.index')->with('error', 'Kamu bukan pemilik room');
     }
 
     /**

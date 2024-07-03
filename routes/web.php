@@ -46,12 +46,6 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     Route::resource('/room-buyer', RoomBuyerController::class);
 
 
-
-    Route::get('/room/{code}', function () {
-        return view('pages.room.detail');
-    })->name('chat');
-
-
     // invoice
     Route::get('/invoice', function () {
         return view('pages.invoice.index');

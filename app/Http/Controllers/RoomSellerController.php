@@ -27,7 +27,7 @@ class RoomSellerController extends Controller
 
     public function index()
     {
-        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->orderBy('id',  'DESC')->get();
+        $rooms = Chat::where('seller_id', '=', Auth::user()->id)->orderBy('id',  'DESC')->paginate(8);
         return view('pages.room.index', compact('rooms'));
     }
 

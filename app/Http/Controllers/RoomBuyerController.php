@@ -31,8 +31,13 @@ class RoomBuyerController extends Controller
     public function store(Request $request)
     {
         $rooms = Chat::where('code', '=', $request->code)->first();
-        if ($rooms->buyer_id != null){
+        if ($rooms->buyer_id != null)
+        {
             return redirect()->back()->with('error', 'room sudah expired');
+        }
+        if ($rooms->seller_id == Auth::user()->id)
+        {
+            return redirect()->back()->with('error', 'Anda tidak bisa masuk room anda sendiri.');
         }
 
         $rooms = Chat::where('code', '=', $request->code);
@@ -45,7 +50,12 @@ class RoomBuyerController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $rooms = Chat::with(['messages', 'buyer'])->where('code', '=', $id)->first();
+        if ($rooms->buyer_id == Auth::user()->id)
+        {
+            return view('pages.room.detail', compact('rooms'));
+        }
+        return redirect()->route('room-buyer.index')->with('error', 'Anda bukan participant');
     }
 
     /**

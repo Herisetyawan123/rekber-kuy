@@ -111,9 +111,16 @@
                             data-id="{{ $room->id }}">
                             <i class="uil uil-user me-1"></i> Share
                         </a>
-                        <a href="{{ route('room-seller.show', $room->code) }}" type="button"
-                            class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i>
-                            Message</a>
+
+                        @if (Route::currentRouteName() == 'room-seller.index')
+                            <a href="{{ route('room-seller.show', $room->code) }}" type="button"
+                                class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i>
+                                Message</a>
+                        @elseif (Route::currentRouteName() == 'room-buyer.index')
+                            <a href="{{ route('room-buyer.show', $room->code) }}" type="button"
+                                class="btn btn-outline-light text-truncate"><i class="uil uil-envelope-alt me-1"></i>
+                                Message</a>
+                        @endif
 
                     </div>
                 </div>
@@ -218,11 +225,11 @@
             document.addEventListener('DOMContentLoaded', (event) => {
                 Toastify({
                     text: "{{ session('success') }}",
-                    duration: 2000,
+                    duration: 3000,
                     newWindow: true,
                     close: true,
-                    gravity: "bottom", // `top` or `bottom`
-                    position: "right", // `left`, `center` or `right`
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
                     stopOnFocus: true, // Prevents dismissing of toast on hover
                     style: {
                         background: "#4B70F5",
@@ -238,15 +245,15 @@
             document.addEventListener('DOMContentLoaded', (event) => {
                 Toastify({
                     text: "{{ session('error') }}",
-                    duration: 2000,
+                    duration: 3000,
                     newWindow: true,
                     close: true,
-                    gravity: "bottom", // `top` or `bottom`
-                    position: "right", // `left`, `center` or `right`
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
                     stopOnFocus: true, // Prevents dismissing of toast on hover
                     style: {
-                        background: "#FF0000",
-                        fontSize: "16px"
+                        background: "#fd625e",
+                        fontSize: "16px",
                     },
                     onClick: function() {} // Callback after click
                 }).showToast();
@@ -277,11 +284,11 @@
                             // alert('Code copied to clipboard: ' + code);
                             Toastify({
                                 text: "Copy Room Code : " + code,
-                                duration: 2000,
+                                duration: 3000,
                                 newWindow: true,
                                 close: true,
-                                gravity: "bottom", // `top` or `bottom`
-                                position: "right", // `left`, `center` or `right`
+                                gravity: "top", // `top` or `bottom`
+                                position: "center", // `left`, `center` or `right`
                                 stopOnFocus: true, // Prevents dismissing of toast on hover
                                 style: {
                                     background: "#4B70F5",

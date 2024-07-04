@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RekeningController;
 use App\Http\Controllers\RoomBuyerController;
 use App\Http\Controllers\RoomSellerController;
 use App\Http\Middleware\CheckProfile;
@@ -60,6 +61,8 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     Route::get('/biodata', function () {
         return view('pages.profile.create');
     })->name('biodata');
+
+    Route::resource('/rekening', RekeningController::class);
 });
 
 

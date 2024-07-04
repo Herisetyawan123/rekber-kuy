@@ -53,6 +53,13 @@
                                 </a>
                             </li>
 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="{{ route('rekening.index') }}"
+                                    id="topnav-dashboard" role="button">
+                                    <i data-feather="book"></i><span data-key="t-invoice">Rekening</span>
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                 </nav>

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RekeningController;
 use App\Http\Controllers\RoomBuyerController;
 use App\Http\Controllers\RoomSellerController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
@@ -63,6 +64,8 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     })->name('biodata');
 
     Route::resource('/rekening', RekeningController::class);
+
+    Route::resource('/transaction', TransactionController::class);
 });
 
 

@@ -25,13 +25,12 @@
                         <div class="col-xl-4 col-7">
                             <div class="d-flex align-items-center">
                                 <div class="flex-shrink-0 avatar-sm me-3 d-sm-block d-none">
-                                    <img
-                                        src="{{ asset(isset($rooms->seller->profile->foto) ? $rooms->seller->profile->foto : 'assets/images/users/avatar-2.jpg') }}"
+                                    <img src="{{ asset(isset($rooms->seller->profile->foto) ? $rooms->seller->profile->foto : 'assets/images/users/avatar-2.jpg') }}"
                                         alt="" class="img-fluid d-block rounded-circle">
                                 </div>
                                 <div class="flex-grow-1">
                                     <h5 class="font-size-14 mb-1 text-truncate"><a href="#"
-                                                                                   class="text-dark">{{ $rooms->title }}</a>
+                                            class="text-dark">{{ $rooms->title }}</a>
                                     </h5>
                                     <p class="text-muted text-truncate mb-0">{{ $rooms->seller->name }}</p>
                                 </div>
@@ -39,7 +38,7 @@
                         </div>
                         <div class="col-xl-8 col-5" style="display: flex; justify-content: end;">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create Transaction
+                                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create Transaction
                             </button>
                         </div>
                     </div>
@@ -51,8 +50,7 @@
                             <span class="title">Today</span>
                         </li>
                         @foreach ($rooms->messages as $message)
-                            <x-bubble-chat :position="Auth::user()->id == $message->user_id ? 'right' : ''"
-                                           :message="$message"/>
+                            <x-bubble-chat :position="Auth::user()->id == $message->user_id ? 'right' : ''" :message="$message" />
                         @endforeach
                     </ul>
                 </div>
@@ -64,7 +62,7 @@
                         <div class="col">
                             <div class="position-relative">
                                 <input name="message" type="text" class="form-control border bg-light-subtle"
-                                       placeholder="Enter Message...">
+                                    placeholder="Enter Message...">
                             </div>
                         </div>
                         <div class="col-auto">
@@ -87,27 +85,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="post">
+                    <form action="{{ route('transaction.store') }}" method="post">
                         @csrf
+                        <input name="roomid" type="hidden" value="{{ $rooms->id }}">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Total Harga:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input name="price" type="text" class="form-control" id="recipient-name" placeholder="Rp. ">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Tax:</label>
-                            {{--                            <textarea class="form-control" id="message-text"></textarea>--}}
-                            <select name="message-text" class="form-select"
-                                    id="basicpill-email-input">
+                            <label for="tax" class="col-form-label">Tax:</label>
+                            {{-- <textarea class="form-control" id="tax"></textarea> --}}
+                            <select name="tax" class="form-select" id="basicpill-email-input">
                                 <option disabled selected>Select</option>
-                                <option value="male">Penjual</option>
-                                <option value="female">Pembeli</option>
+                                <option value="{{ $rooms->seller_id }}">{{ $rooms->seller->name }}</option>
+                                <option value="{{ $rooms->buyer_id }}" @disabled(!$rooms->buyer_id)>{{ $rooms->buyer_id ? $rooms->buyer->name : "Beluma ada data pembeli"}}</option>
                             </select>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create Transaction</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
                 </div>
             </div>
         </div>
@@ -123,7 +121,7 @@
 
         // Panggil fungsi autoScroll setiap kali chat diperbarui (misalnya setelah form disubmit)
         const chatForm = document.querySelector('form[action="{{ route('chat.store') }}"]');
-        chatForm.addEventListener('submit', function () {
+        chatForm.addEventListener('submit', function() {
             setTimeout(autoScroll, 100); // Tambahkan sedikit delay untuk memastikan chat ditambahkan
         });
     </script>

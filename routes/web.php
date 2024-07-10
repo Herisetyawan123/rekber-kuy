@@ -66,6 +66,7 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     Route::resource('/rekening', RekeningController::class);
 
     Route::resource('/transaction', TransactionController::class);
+    
 });
 
 

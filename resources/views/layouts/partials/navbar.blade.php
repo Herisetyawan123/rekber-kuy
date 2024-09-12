@@ -21,6 +21,13 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
+                                    @role('admin')
+                                    <a href="{{ route('adminindex') }}" class="dropdown-item"
+                                        data-key="t-calendar">Semua Room</a>
+                                    {{-- <a href="{{ route('transaksi.penjual') }}" class="dropdown-item"
+                                        data-key="t-chat">Semua Transaksi</a> --}}
+                                    @endrole
+                                    
                                     <a href="{{ route('room-seller.index') }}" class="dropdown-item"
                                         data-key="t-calendar">Room Chat Penjual</a>
                                     <a href="{{ route('transaksi.penjual') }}" class="dropdown-item"

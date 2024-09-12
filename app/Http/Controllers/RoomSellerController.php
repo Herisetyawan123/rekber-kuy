@@ -31,6 +31,12 @@ class RoomSellerController extends Controller
         return view('pages.room.index', compact('rooms'));
     }
 
+    public function adminindex()
+    {
+        $rooms = Chat::orderBy('id',  'DESC')->paginate(8);
+        return view('pages.room.index', compact('rooms'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

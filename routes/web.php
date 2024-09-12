@@ -10,7 +10,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Middleware\CheckProfile;
 use Illuminate\Support\Facades\Route;
 
-require_once __DIR__."/auth/login.php";
+require_once __DIR__ . "/auth/login.php";
 
 // after dashboard
 Route::middleware(['auth', CheckProfile::class])->group(function () {
@@ -40,6 +40,7 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     })->name('transaksi.detail.pembeli');
 
     // Room Seller
+    Route::get('/room-seller/all', [RoomSellerController::class, 'adminindex'])->name('adminindex');
     Route::resource('/room-seller', RoomSellerController::class);
     Route::get('/get-code/{id}', [RoomSellerController::class, 'getCode'])->name('get-code');
     Route::post('/chat/', [RoomSellerController::class, 'chat'])->name('chat.store');
@@ -66,7 +67,6 @@ Route::middleware(['auth', CheckProfile::class])->group(function () {
     Route::resource('/rekening', RekeningController::class);
 
     Route::resource('/transaction', TransactionController::class);
-    
 });
 
 
@@ -76,4 +76,4 @@ Route::get('/', function () {
 })->name('kontol');
 
 
-require_once __DIR__."/auth/register.php";
+require_once __DIR__ . "/auth/register.php";

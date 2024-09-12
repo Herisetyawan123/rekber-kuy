@@ -9,7 +9,7 @@
                             </span>
                             <span class="logo-lg">
                                 <img src="{{ asset('assets/images/logo/logo-dark.png') }}" alt=""
-                                    height="24"> <span {{-- class="logo-txt">Minia</span> --}} </span>
+                                    height="24">
                         </a>
 
                         <a href="{{ route('home') }}" class="logo logo-light">
@@ -19,7 +19,7 @@
                             </span>
                             <span class="logo-lg">
                                 <img src="{{ asset('assets/images/logo/logo-light.png') }}" alt=""
-                                    height="24"> <span {{-- class="logo-txt">Minia</span> --}} </span>
+                                    height="24">
                         </a>
                     </div>
 
@@ -215,12 +215,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- 
-                    <div class="dropdown d-inline-block">
-                        <button type="button" class="btn header-item right-bar-toggle me-2">
-                            <i data-feather="settings" class="icon-lg"></i>
-                        </button>
-                    </div> --}}
 
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item bg-light-subtle border-start border-end"

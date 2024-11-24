@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
 
     <!-- start page title -->
     <div class="row">
@@ -241,4 +241,4 @@
             });
         });
     </script>
-</x-dashboard-layouts>
+</x-layouts-dashboard>

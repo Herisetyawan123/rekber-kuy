@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
     
             <!-- start page title -->
             <div class="row">
@@ -540,4 +540,4 @@
                 <!-- end col -->
             </div>
             <!-- end row -->
-</x-dashboard-layouts>
+</x-layouts-dashboard>

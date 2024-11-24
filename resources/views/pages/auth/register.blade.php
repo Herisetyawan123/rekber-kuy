@@ -1,4 +1,4 @@
-<x-auth-layouts>
+<x-layouts-auth>
     <div class="auth-full-page-content d-flex p-sm-5 p-4">
         <div class="w-100">
             <div class="d-flex flex-column h-100">
@@ -65,4 +65,4 @@
             </div>
         </div>
     </div>
-</x-auth-layouts>
+</x-layouts-auth>

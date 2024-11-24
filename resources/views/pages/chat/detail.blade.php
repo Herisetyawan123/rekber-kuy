@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
 
     <div class="row">
         <div class="col-12">
@@ -291,4 +291,4 @@
             </div>
         </div>
     </div>
-</x-dashboard-layouts>
+</x-layouts-dashboard>

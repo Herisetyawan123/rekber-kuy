@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -1538,4 +1538,4 @@
                     <!-- container-fluid -->
                 </div>
                 <!-- End Page-content -->
-</x-dashboard-layouts>
+</x-layouts-dashboard>

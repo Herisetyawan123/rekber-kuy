@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
@@ -361,4 +361,4 @@
 
 
 
-</x-dashboard-layouts>
+</x-layouts-dashboard>

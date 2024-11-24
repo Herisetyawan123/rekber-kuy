@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
 
     <div class="row">
         <div class="col-12">
@@ -116,4 +116,4 @@
             setTimeout(autoScroll, 100); // Tambahkan sedikit delay untuk memastikan chat ditambahkan
         });
     </script>
-</x-dashboard-layouts>
+</x-layouts-dashboard>

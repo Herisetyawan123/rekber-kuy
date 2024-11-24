@@ -1,4 +1,4 @@
-<x-dashboard-layouts>
+<x-layouts-dashboard>
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -128,4 +128,4 @@
             </div>
         </div>
         <!-- end row -->
-</x-dashboard-layouts>
+</x-layouts-dashboard>
